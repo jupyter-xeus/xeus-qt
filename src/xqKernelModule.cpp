@@ -59,6 +59,9 @@ xqKernelModule::xqKernelModule()
 {
 }
 
+xqKernelModule::~xqKernelModule()
+{}
+
 //-----------------------------------------------------------------------------
 void xqKernelModule::startKernel(const QString& connectionFile)
 {
@@ -89,7 +92,7 @@ void xqKernelModule::startKernel(const QString& connectionFile)
     // }
     //qSlicerJupyterKernelModule* m_jupyter_kernel_module = nullptr;
     //but maybe not, maybe this is just a python thing
-    interpreter->set_jupyter_kernel_module(this);
+    // interpreter->set_jupyter_kernel_module(this);
 
     using history_manager_ptr = std::unique_ptr<xeus::xhistory_manager>;
     history_manager_ptr hist = xeus::make_in_memory_history_manager();

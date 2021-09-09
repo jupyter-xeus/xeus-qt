@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libxq.a CMakeFiles/xq-static.dir/xq-static_autogen/mocs_compilation.cpp.o CMakeFiles/xq-static.dir/src/xqServer.cpp.o CMakeFiles/xq-static.dir/src/xqKernelModule.cpp.o CMakeFiles/xq-static.dir/src/xqGenericApplication.cpp.o CMakeFiles/xq-static.dir/src/xqGenericInterpreter.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libxq.a

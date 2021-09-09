@@ -6,6 +6,10 @@ set(XQ_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(XQ_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(XQ_TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test)
 
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 set(nlohmann_json_REQUIRED_VERSION 3.2.0)
 set(xtl_REQUIRED_VERSION 0.7)
 set(cppzmq_REQUIRED_VERSION 4.4.1)
@@ -115,10 +119,6 @@ set(XQ_SOURCES
     ${XQ_SOURCE_DIR}/xqGenericInterpreter.cpp
    )
 
-QT6_WRAP_CPP(xq_HEADERS_MOC ${XQ_HEADERS})
-INCLUDE(${QT_USE_FILE})
-ADD_DEFINITIONS(${QT_DEFINITIONS})
-
 # Targets and link
 # ================
 
@@ -168,6 +168,7 @@ macro(xq_create_target target_name linkage output_name)
         PUBLIC ${CPPZMQ_TARGET_NAME}
         PUBLIC nlohmann_json::nlohmann_json
         PUBLIC xtl
+        PUBLIC xeus
         PUBLIC Qt6::Widgets
         PUBLIC Qt6::Core
     )

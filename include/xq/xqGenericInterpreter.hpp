@@ -13,7 +13,7 @@ public:
     xqGenericInterpreter();
     virtual ~xqGenericInterpreter() = default;
 
-    void set_jupyter_kernel_module(xqKernelModule* module);
+    // void set_jupyter_kernel_module(xqKernelModule* module);
 
 private:
     void configure_impl() override;
@@ -38,7 +38,7 @@ private:
 
     void shutdown_request_impl() override;
 
-    xqKernelModule* m_jupyter_kernel_module = nullptr;
+    // xqKernelModule* m_jupyter_kernel_module = nullptr;
 };
 
 #endif

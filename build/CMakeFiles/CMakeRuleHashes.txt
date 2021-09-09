@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+0b80c19331478beb9450ee5af6509ac8 CMakeFiles/xq-static_autogen
+ea1be637219658be87a34302151f9438 CMakeFiles/xq_autogen

@@ -11,7 +11,7 @@ class xqKernelModule : public QObject
 public:
 
   xqKernelModule();
-  virtual ~xqKernelModule() = default;
+  virtual ~xqKernelModule();
 
   double pollIntervalSec();
 
