@@ -104,16 +104,11 @@ endif ()
 set(XQ_HEADERS
     ${XQ_INCLUDE_DIR}/xq/xq.hpp
     ${XQ_INCLUDE_DIR}/xq/xqServer.hpp
-    ${XQ_INCLUDE_DIR}/xq/xqKernelModule.hpp
-    ${XQ_INCLUDE_DIR}/xq/xqGenericApplication.hpp
-    ${XQ_INCLUDE_DIR}/xq/xqGenericInterpreter.hpp
     )
 
 set(XQ_SOURCES
     ${XQ_SOURCE_DIR}/xqServer.cpp
     ${XQ_SOURCE_DIR}/xqKernelModule.cpp
-    ${XQ_SOURCE_DIR}/xqGenericApplication.cpp
-    ${XQ_SOURCE_DIR}/xqGenericInterpreter.cpp
    )
 
 # Targets and link
