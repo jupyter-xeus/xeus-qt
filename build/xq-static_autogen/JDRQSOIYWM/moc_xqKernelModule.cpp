@@ -1,19 +1,18 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'xqKernelModule.hpp'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.1.3)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.9)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include <memory>
 #include "../../../include/xq/xqKernelModule.hpp"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'xqKernelModule.hpp' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.1.3. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.12.9. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,35 +21,36 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_xqKernelModule_t {
-    const uint offsetsAndSize[18];
-    char stringdata0[119];
+    QByteArrayData data[8];
+    char stringdata0[104];
 };
-#define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_xqKernelModule_t, stringdata0) + ofs), len 
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_xqKernelModule_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
 static const qt_meta_stringdata_xqKernelModule_t qt_meta_stringdata_xqKernelModule = {
     {
-QT_MOC_LITERAL(0, 14), // "xqKernelModule"
-QT_MOC_LITERAL(15, 13), // "kernelStarted"
-QT_MOC_LITERAL(29, 0), // ""
-QT_MOC_LITERAL(30, 19), // "kernelStopRequested"
-QT_MOC_LITERAL(50, 11), // "startKernel"
-QT_MOC_LITERAL(62, 14), // "connectionFile"
-QT_MOC_LITERAL(77, 10), // "stopKernel"
-QT_MOC_LITERAL(88, 18), // "setPollIntervalSec"
-QT_MOC_LITERAL(107, 11) // "intervalSec"
+QT_MOC_LITERAL(0, 0, 14), // "xqKernelModule"
+QT_MOC_LITERAL(1, 15, 13), // "kernelStarted"
+QT_MOC_LITERAL(2, 29, 0), // ""
+QT_MOC_LITERAL(3, 30, 19), // "kernelStopRequested"
+QT_MOC_LITERAL(4, 50, 11), // "startKernel"
+QT_MOC_LITERAL(5, 62, 10), // "stopKernel"
+QT_MOC_LITERAL(6, 73, 18), // "setPollIntervalSec"
+QT_MOC_LITERAL(7, 92, 11) // "intervalSec"
 
     },
     "xqKernelModule\0kernelStarted\0\0"
     "kernelStopRequested\0startKernel\0"
-    "connectionFile\0stopKernel\0setPollIntervalSec\0"
-    "intervalSec"
+    "stopKernel\0setPollIntervalSec\0intervalSec"
 };
 #undef QT_MOC_LITERAL
 
 static const uint qt_meta_data_xqKernelModule[] = {
 
  // content:
-       9,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        5,   14, // methods
@@ -60,23 +60,23 @@ static const uint qt_meta_data_xqKernelModule[] = {
        0,       // flags
        2,       // signalCount
 
- // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   44,    2, 0x06,    0 /* Public */,
-       3,    0,   45,    2, 0x06,    1 /* Public */,
+ // signals: name, argc, parameters, tag, flags
+       1,    0,   39,    2, 0x06 /* Public */,
+       3,    0,   40,    2, 0x06 /* Public */,
 
- // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    1,   46,    2, 0x0a,    2 /* Public */,
-       6,    0,   49,    2, 0x0a,    4 /* Public */,
-       7,    1,   50,    2, 0x0a,    5 /* Public */,
+ // slots: name, argc, parameters, tag, flags
+       4,    0,   41,    2, 0x0a /* Public */,
+       5,    0,   42,    2, 0x0a /* Public */,
+       6,    1,   43,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Double,    8,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Double,    7,
 
        0        // eod
 };
@@ -85,11 +85,11 @@ void xqKernelModule::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<xqKernelModule *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->kernelStarted(); break;
         case 1: _t->kernelStopRequested(); break;
-        case 2: _t->startKernel((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 2: _t->startKernel(); break;
         case 3: _t->stopKernel(); break;
         case 4: _t->setPollIntervalSec((*reinterpret_cast< double(*)>(_a[1]))); break;
         default: ;
@@ -113,18 +113,12 @@ void xqKernelModule::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     }
 }
 
-const QMetaObject xqKernelModule::staticMetaObject = { {
-    QMetaObject::SuperData::link<QObject::staticMetaObject>(),
-    qt_meta_stringdata_xqKernelModule.offsetsAndSize,
+QT_INIT_METAOBJECT const QMetaObject xqKernelModule::staticMetaObject = { {
+    &QObject::staticMetaObject,
+    qt_meta_stringdata_xqKernelModule.data,
     qt_meta_data_xqKernelModule,
     qt_static_metacall,
     nullptr,
-qt_incomplete_metaTypeArray<qt_meta_stringdata_xqKernelModule_t
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<double, std::false_type>
-
-
->,
     nullptr
 } };
 
@@ -153,7 +147,7 @@ int xqKernelModule::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 5)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+            *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 5;
     }
     return _id;

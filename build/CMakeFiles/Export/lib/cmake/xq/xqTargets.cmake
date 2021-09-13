@@ -57,7 +57,7 @@ set_target_properties(xq PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "GUID_CFUUID"
   INTERFACE_COMPILE_OPTIONS "-Wunused-parameter;-Wextra;-Wreorder;-march=native"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "nlohmann_json::nlohmann_json;xtl;xeus;Qt6::Widgets;Qt6::Core;OpenSSL::Crypto;-framework CoreFoundation"
+  INTERFACE_LINK_LIBRARIES "nlohmann_json::nlohmann_json;xtl;xeus;Qt5::Core;OpenSSL::Crypto;-framework CoreFoundation"
 )
 
 # Create imported target xq-static
@@ -67,7 +67,7 @@ set_target_properties(xq-static PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "XQ_STATIC_LIB;GUID_CFUUID"
   INTERFACE_COMPILE_OPTIONS "-Wunused-parameter;-Wextra;-Wreorder;-march=native"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "nlohmann_json::nlohmann_json;xtl;xeus;Qt6::Widgets;Qt6::Core;OpenSSL::Crypto;-framework CoreFoundation"
+  INTERFACE_LINK_LIBRARIES "nlohmann_json::nlohmann_json;xtl;xeus;Qt5::Core;OpenSSL::Crypto;-framework CoreFoundation"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+#include "xeus/xkernel.hpp"
+
 class xqKernelModulePrivate;
 
 class xqKernelModule : public QObject
@@ -17,9 +19,11 @@ public:
 
   QString connectionFile();
 
+  xeus::xkernel* Kernel;
+
 public slots:
 
-  void startKernel(const QString& connectionFile);
+  void startKernel();
   void stopKernel();
   void setPollIntervalSec(double intervalSec);
 
@@ -29,13 +33,6 @@ signals:
 
   // Called when Jupyter requested stopping of the kernel.
   void kernelStopRequested();
-protected:
-  QScopedPointer<xqKernelModulePrivate> d_ptr;
-
-private:
-  Q_DECLARE_PRIVATE(xqKernelModule);
-  Q_DISABLE_COPY(xqKernelModule);
-
 };
 
 #endif

@@ -35,4 +35,5 @@ protected:
 std::unique_ptr<xeus::xserver> make_xqServer(zmq::context_t& context,
                                              const xeus::xconfiguration& config);
 
+
 #endif

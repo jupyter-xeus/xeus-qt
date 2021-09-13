@@ -1,9 +1,7 @@
 #define GUID_CFUUID 1
 #define JSON_USE_IMPLICIT_CONVERSIONS 1
 #define QT_CORE_LIB 1
-#define QT_GUI_LIB 1
 #define QT_NO_DEBUG 1
-#define QT_WIDGETS_LIB 1
 #define SIZEOF_DPTR (sizeof(void*))
 #define XQ_EXPORTS 1
 #define XQ_STATIC_LIB 1

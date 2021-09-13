@@ -1,25 +1,16 @@
 CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Users/mariana/dev/xq/src/xqKernelModule.cpp \
-  /Users/mariana/dev/xq/include/xq/xqKernelModule.hpp \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QObject \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qobject.h \
-  /usr/local/opt/qt/include/QtCore/qobjectdefs.h \
-  /usr/local/opt/qt/include/QtCore/qnamespace.h \
-  /usr/local/opt/qt/include/QtCore/qglobal.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/type_traits \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/pthread.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/version \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/ios \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iosfwd \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/wchar.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__nullptr \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/utility \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__tuple \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/initializer_list \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstring \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/string.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/wchar.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/cdefs.h \
@@ -31,9 +22,9 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/AvailabilityVersions.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/AvailabilityInternal.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_size_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_null.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_size_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_mbstate_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/machine/types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/i386/types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_int8_t.h \
@@ -46,25 +37,6 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_u_int64_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_intptr_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_uintptr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_errno_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_ssize_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/strings.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uint8_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uint16_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uint32_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uint64_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_intmax_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uintmax_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__debug \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iosfwd \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/wchar.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/wchar.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_mbstate_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_wchar_t.h \
@@ -76,6 +48,7 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_ctermid.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_off_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_ssize_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/time.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_clock_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_time_t.h \
@@ -88,7 +61,38 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/ctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_ctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/runetype.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/assert.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__locale \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/string \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/string_view \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__string \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/algorithm \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/initializer_list \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstddef \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/version \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/type_traits \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstring \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_errno_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/strings.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/utility \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__tuple \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstdint \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uint8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uint16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uint32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uint64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_intmax_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_uintmax_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__debug \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/memory \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/typeinfo \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/exception \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstdlib \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/wait.h \
@@ -118,19 +122,6 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/malloc/_malloc.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_dev_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_mode_t.h \
-  /usr/local/opt/qt/include/QtCore/qconfig.h \
-  /usr/local/opt/qt/include/QtCore/qtcore-config.h \
-  /usr/local/opt/qt/include/QtCore/qsystemdetection.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/TargetConditionals.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/AvailabilityMacros.h \
-  /usr/local/opt/qt/include/QtCore/qprocessordetection.h \
-  /usr/local/opt/qt/include/QtCore/qcompilerdetection.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/atomic \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/algorithm \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/memory \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/typeinfo \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/exception \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstdlib \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/new \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/limits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__undef_macros \
@@ -138,6 +129,7 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__functional_base \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/tuple \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/stdexcept \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/atomic \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__threading_support \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/chrono \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/ctime \
@@ -169,30 +161,9 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/_types/_mach_port_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sched.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cassert \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/functional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/bit \
-  /usr/local/opt/qt/include/QtCore/qtypeinfo.h \
-  /usr/local/opt/qt/include/QtCore/qcontainerfwd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/variant \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/array \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/optional \
-  /usr/local/opt/qt/include/QtCore/qsysinfo.h \
-  /usr/local/opt/qt/include/QtCore/qlogging.h \
-  /usr/local/opt/qt/include/QtCore/qflags.h \
-  /usr/local/opt/qt/include/QtCore/qatomic.h \
-  /usr/local/opt/qt/include/QtCore/qbasicatomic.h \
-  /usr/local/opt/qt/include/QtCore/qatomic_cxx11.h \
-  /usr/local/opt/qt/include/QtCore/qgenericatomic.h \
-  /usr/local/opt/qt/include/QtCore/qglobalstatic.h \
-  /usr/local/opt/qt/include/QtCore/qmutex.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/mutex \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__mutex_base \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/system_error \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__errc \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cerrno \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/string \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/string_view \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cstdio \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cwchar \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cwctype \
@@ -200,107 +171,11 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_wctrans_t.h \
-  /usr/local/opt/qt/include/QtCore/qnumeric.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/math.h \
-  /usr/local/opt/qt/include/QtCore/qversiontagging.h \
-  /usr/local/opt/qt/include/QtCore/qtmetamacros.h \
-  /usr/local/opt/qt/include/QtCore/qobjectdefs_impl.h \
-  /usr/local/opt/qt/include/QtCore/qstring.h \
-  /usr/local/opt/qt/include/QtCore/qchar.h \
-  /usr/local/opt/qt/include/QtCore/qstringview.h \
-  /usr/local/opt/qt/include/QtCore/qbytearray.h \
-  /usr/local/opt/qt/include/QtCore/qrefcount.h \
-  /usr/local/opt/qt/include/QtCore/qarraydata.h \
-  /usr/local/opt/qt/include/QtCore/qpair.h \
-  /usr/local/opt/qt/include/QtCore/qarraydatapointer.h \
-  /usr/local/opt/qt/include/QtCore/qarraydataops.h \
-  /usr/local/opt/qt/include/QtCore/qcontainertools_impl.h \
-  /usr/local/opt/qt/include/QtCore/qbytearrayalgorithms.h \
-  /usr/local/opt/qt/include/QtCore/qbytearrayview.h \
-  /usr/local/opt/qt/include/QtCore/qstringliteral.h \
-  /usr/local/opt/qt/include/QtCore/qstringalgorithms.h \
-  /usr/local/opt/qt/include/QtCore/qanystringview.h \
-  /usr/local/opt/qt/include/QtCore/qutf8stringview.h \
-  /usr/local/opt/qt/include/QtCore/qstringtokenizer.h \
-  /usr/local/opt/qt/include/QtCore/qlist.h \
-  /usr/local/opt/qt/include/QtCore/qhashfunctions.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/numeric \
-  /usr/local/opt/qt/include/QtCore/qiterator.h \
-  /usr/local/opt/qt/include/QtCore/qbytearraylist.h \
-  /usr/local/opt/qt/include/QtCore/qstringlist.h \
-  /usr/local/opt/qt/include/QtCore/qalgorithms.h \
-  /usr/local/opt/qt/include/QtCore/qstringmatcher.h \
-  /usr/local/opt/qt/include/QtCore/qscopedpointer.h \
-  /usr/local/opt/qt/include/QtCore/qmetatype.h \
-  /usr/local/opt/qt/include/QtCore/qcompare.h \
-  /usr/local/opt/qt/include/QtCore/qvarlengtharray.h \
-  /usr/local/opt/qt/include/QtCore/qdatastream.h \
-  /usr/local/opt/qt/include/QtCore/qiodevicebase.h \
-  /usr/local/opt/qt/include/QtCore/qiterable.h \
-  /usr/local/opt/qt/include/QtCore/qmetacontainer.h \
-  /usr/local/opt/qt/include/QtCore/qcontainerinfo.h \
-  /usr/local/opt/qt/include/QtCore/qtaggedpointer.h \
-  /usr/local/opt/qt/include/QtCore/qmath.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/vector \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__bit_reference \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__split_buffer \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/list \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/map \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__tree \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__node_handle \
-  /usr/local/opt/qt/include/QtCore/qobject_impl.h \
-  /usr/local/opt/qt/include/QtCore/qproperty.h \
-  /usr/local/opt/qt/include/QtCore/qshareddata.h \
-  /usr/local/opt/qt/include/QtCore/qpropertyprivate.h \
-  /Users/mariana/dev/xq/include/xq/xqGenericApplication.hpp \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QCoreApplication \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qcoreapplication.h \
-  /usr/local/opt/qt/include/QtCore/qobject.h \
-  /usr/local/opt/qt/include/QtCore/qcoreevent.h \
-  /usr/local/opt/qt/include/QtCore/qeventloop.h \
-  /usr/local/opt/qt/include/QtCore/qdebug.h \
-  /usr/local/opt/qt/include/QtCore/qhash.h \
-  /usr/local/opt/qt/include/QtCore/qmap.h \
-  /usr/local/opt/qt/include/QtCore/qshareddata_impl.h \
-  /usr/local/opt/qt/include/QtCore/qtextstream.h \
-  /usr/local/opt/qt/include/QtCore/qstringconverter.h \
-  /usr/local/opt/qt/include/QtCore/qset.h \
-  /usr/local/opt/qt/include/QtCore/qcontiguouscache.h \
-  /usr/local/opt/qt/include/QtCore/qsharedpointer.h \
-  /usr/local/opt/qt/include/QtCore/qsharedpointer_impl.h \
-  /Users/mariana/dev/xq/include/xq/xqGenericInterpreter.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xinterpreter.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xcomm.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/json.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/adl_serializer.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/conversions/from_json.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/forward_list \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/unordered_map \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__hash_table \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/valarray \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/exceptions.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/input/position_t.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/macro_scope.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/thirdparty/hedley/hedley.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/meta/cpp_future.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/meta/type_traits.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/iterators/iterator_traits.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/meta/void_t.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/meta/detected.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/json_fwd.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/value_t.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/conversions/to_json.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/iterators/iteration_proxy.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/byte_container_with_subtype.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/hash.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/input/binary_reader.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/input/input_adapters.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/istream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/ostream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/ios \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__locale \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/mutex \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__mutex_base \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/system_error \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__errc \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cerrno \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/locale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/locale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_locale.h \
@@ -315,6 +190,8 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/xlocale/_wchar.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/xlocale/_wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/streambuf \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/istream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/nl_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/sys/types.h \
@@ -345,6 +222,97 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__bit_reference \
+  /Users/mariana/dev/xq/include/xq/xqKernelModule.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/QObject \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qobject.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qobjectdefs.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qnamespace.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qglobal.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qconfig.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qtcore-config.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qsystemdetection.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/TargetConditionals.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/AvailabilityMacros.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qprocessordetection.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qcompilerdetection.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qtypeinfo.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qsysinfo.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qlogging.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qflags.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qatomic.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qbasicatomic.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qatomic_cxx11.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qgenericatomic.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qglobalstatic.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qmutex.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qnumeric.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qversiontagging.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qobjectdefs_impl.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstring.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qchar.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qbytearray.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qrefcount.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qarraydata.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringliteral.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringalgorithms.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringview.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qlist.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qalgorithms.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qiterator.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qhashfunctions.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qpair.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/numeric \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/list \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qbytearraylist.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringlist.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qregexp.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringmatcher.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qscopedpointer.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qmetatype.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qvarlengtharray.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qcontainerfwd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/vector \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__split_buffer \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__tree \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__node_handle \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/optional \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qobject_impl.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xkernel.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xdebugger.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/zmq.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/zmq.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iomanip \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/sstream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/array \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/json.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/adl_serializer.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/conversions/from_json.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/forward_list \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/unordered_map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__hash_table \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/valarray \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/exceptions.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/input/position_t.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/macro_scope.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/meta/cpp_future.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/meta/type_traits.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/meta/void_t.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/meta/detected.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/json_fwd.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/value_t.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/conversions/to_json.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/byte_container_with_subtype.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/hash.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/input/binary_reader.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/input/input_adapters.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/input/json_sax.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/input/lexer.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/clocale \
@@ -363,94 +331,50 @@ CMakeFiles/xq.dir/src/xqKernelModule.cpp.o: \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/ordered_map.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/macro_unscope.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xguid.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xbasic_fixed_string.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/sstream \
-  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xhash.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xtl_config.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/xeus/xeus.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xmessage.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xauthentication.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/zmq.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/zmq.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iomanip \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xkernel_configuration.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xcontrol_messenger.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/zmq_addon.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/deque \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xcontrol_messenger.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/xeus/xhistory_manager.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xinterpreter.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xcomm.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xguid.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xbasic_fixed_string.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xhash.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xtl_config.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xmessage.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xauthentication.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xserver.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xlogger.hpp \
+  /Users/mariana/dev/xq/include/xq/xqGenericApplication.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/QCoreApplication \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qcoreapplication.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qcoreevent.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qeventloop.h \
+  /Users/mariana/dev/xq/include/xq/xqGenericInterpreter.hpp \
   /Users/mariana/dev/xq/include/xq/xqServer.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/xeus/xserver_zmq.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xserver.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xkernel_configuration.hpp \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QList \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qlist.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QSharedPointer \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qsharedpointer.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QSocketNotifier \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qsocketnotifier.h \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xkernel.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xdebugger.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xlogger.hpp \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QDebug \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qdebug.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QFile \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qfile.h \
-  /usr/local/opt/qt/include/QtCore/qfiledevice.h \
-  /usr/local/opt/qt/include/QtCore/qiodevice.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/filesystem \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/stack \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QFileInfo \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h \
-  /usr/local/opt/qt/include/QtCore/qfile.h \
-  /usr/local/opt/qt/include/QtCore/qdatetime.h \
-  /usr/local/opt/qt/include/QtCore/qcalendar.h \
-  /usr/local/opt/qt/include/QtCore/qlocale.h \
-  /usr/local/opt/qt/include/QtCore/qvariant.h \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QLabel \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qlabel.h \
-  /usr/local/opt/qt/include/QtWidgets/qtwidgetsglobal.h \
-  /usr/local/opt/qt/include/QtGui/qtguiglobal.h \
-  /usr/local/opt/qt/include/QtGui/qtgui-config.h \
-  /usr/local/opt/qt/include/QtWidgets/qtwidgets-config.h \
-  /usr/local/opt/qt/include/QtWidgets/qframe.h \
-  /usr/local/opt/qt/include/QtWidgets/qwidget.h \
-  /usr/local/opt/qt/include/QtGui/qwindowdefs.h \
-  /usr/local/opt/qt/include/QtCore/qmargins.h \
-  /usr/local/opt/qt/include/QtGui/qpaintdevice.h \
-  /usr/local/opt/qt/include/QtCore/qrect.h \
-  /usr/local/opt/qt/include/QtCore/qsize.h \
-  /usr/local/opt/qt/include/QtCore/qpoint.h \
-  /usr/local/opt/qt/include/QtGui/qpalette.h \
-  /usr/local/opt/qt/include/QtGui/qcolor.h \
-  /usr/local/opt/qt/include/QtGui/qrgb.h \
-  /usr/local/opt/qt/include/QtGui/qrgba64.h \
-  /usr/local/opt/qt/include/QtGui/qbrush.h \
-  /usr/local/opt/qt/include/QtGui/qimage.h \
-  /usr/local/opt/qt/include/QtGui/qpixelformat.h \
-  /usr/local/opt/qt/include/QtGui/qtransform.h \
-  /usr/local/opt/qt/include/QtGui/qpolygon.h \
-  /usr/local/opt/qt/include/QtGui/qregion.h \
-  /usr/local/opt/qt/include/QtCore/qline.h \
-  /usr/local/opt/qt/include/QtGui/qpixmap.h \
-  /usr/local/opt/qt/include/QtGui/qfont.h \
-  /usr/local/opt/qt/include/QtGui/qfontmetrics.h \
-  /usr/local/opt/qt/include/QtGui/qfontinfo.h \
-  /usr/local/opt/qt/include/QtWidgets/qsizepolicy.h \
-  /usr/local/opt/qt/include/QtGui/qcursor.h \
-  /usr/local/opt/qt/include/QtGui/qbitmap.h \
-  /usr/local/opt/qt/include/QtGui/qkeysequence.h \
-  /usr/local/opt/qt/include/QtGui/qpicture.h \
-  /usr/local/opt/qt/include/QtGui/qtextdocument.h \
-  /usr/local/opt/qt/include/QtCore/qurl.h \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QMainWindow \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qmainwindow.h \
-  /usr/local/opt/qt/include/QtWidgets/qtabwidget.h \
-  /usr/local/opt/qt/include/QtGui/qicon.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QProcess \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qprocess.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QStandardPaths \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qstandardpaths.h \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/QStatusBar \
-  /usr/local/opt/qt/lib/QtWidgets.framework/Headers/qstatusbar.h \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QTextStream \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qtextstream.h
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/QList \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/QSharedPointer \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qsharedpointer.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qshareddata.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qhash.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qsharedpointer_impl.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/QSocketNotifier \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qsocketnotifier.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/QDebug \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qdebug.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qmap.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qtextstream.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qiodevice.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qlocale.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qvariant.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/variant \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qvector.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qset.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qcontiguouscache.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/QFileInfo \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qfileinfo.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qfile.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qfiledevice.h

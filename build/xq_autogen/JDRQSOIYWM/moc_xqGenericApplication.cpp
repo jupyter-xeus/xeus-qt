@@ -1,19 +1,18 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'xqGenericApplication.hpp'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.1.3)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.9)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include <memory>
 #include "../../../include/xq/xqGenericApplication.hpp"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'xqGenericApplication.hpp' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.1.3. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.12.9. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,14 +21,17 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_xqGenericApplication_t {
-    const uint offsetsAndSize[2];
+    QByteArrayData data[1];
     char stringdata0[21];
 };
-#define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_xqGenericApplication_t, stringdata0) + ofs), len 
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_xqGenericApplication_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
 static const qt_meta_stringdata_xqGenericApplication_t qt_meta_stringdata_xqGenericApplication = {
     {
-QT_MOC_LITERAL(0, 20) // "xqGenericApplication"
+QT_MOC_LITERAL(0, 0, 20) // "xqGenericApplication"
 
     },
     "xqGenericApplication"
@@ -39,7 +41,7 @@ QT_MOC_LITERAL(0, 20) // "xqGenericApplication"
 static const uint qt_meta_data_xqGenericApplication[] = {
 
  // content:
-       9,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        0,    0, // methods
@@ -54,18 +56,17 @@ static const uint qt_meta_data_xqGenericApplication[] = {
 
 void xqGenericApplication::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
-const QMetaObject xqGenericApplication::staticMetaObject = { {
-    QMetaObject::SuperData::link<QCoreApplication::staticMetaObject>(),
-    qt_meta_stringdata_xqGenericApplication.offsetsAndSize,
+QT_INIT_METAOBJECT const QMetaObject xqGenericApplication::staticMetaObject = { {
+    &QCoreApplication::staticMetaObject,
+    qt_meta_stringdata_xqGenericApplication.data,
     qt_meta_data_xqGenericApplication,
     qt_static_metacall,
-    nullptr,
     nullptr,
     nullptr
 } };

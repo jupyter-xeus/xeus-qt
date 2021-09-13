@@ -157,11 +157,9 @@ libxq.1.0.0.dylib: CMakeFiles/xq.dir/src/xqGenericApplication.cpp.o
 libxq.1.0.0.dylib: CMakeFiles/xq.dir/src/xqGenericInterpreter.cpp.o
 libxq.1.0.0.dylib: CMakeFiles/xq.dir/build.make
 libxq.1.0.0.dylib: /Users/mariana/minirhumba/envs/excuseme/lib/libxeus.1.0.2.dylib
-libxq.1.0.0.dylib: /usr/local/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets
+libxq.1.0.0.dylib: /Users/mariana/minirhumba/envs/excuseme/lib/libQt5Core.5.12.9.dylib
 libxq.1.0.0.dylib: /usr/local/Cellar/openssl@1.1/1.1.1l/lib/libcrypto.dylib
 libxq.1.0.0.dylib: /Users/mariana/minirhumba/envs/excuseme/lib/libzmq.dylib
-libxq.1.0.0.dylib: /usr/local/opt/qt/lib/QtGui.framework/Versions/A/QtGui
-libxq.1.0.0.dylib: /usr/local/opt/qt/lib/QtCore.framework/Versions/A/QtCore
 libxq.1.0.0.dylib: CMakeFiles/xq.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mariana/dev/xq/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libxq.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xq.dir/link.txt --verbose=$(VERBOSE)

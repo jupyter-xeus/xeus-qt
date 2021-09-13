@@ -54,10 +54,7 @@ message(STATUS "xeus binary version: v${XQ_BINARY_VERSION}")
 # Dependencies
 # ============
 
-find_package(Qt6Widgets ${Qt6_REQUIRED_VERSION} REQUIRED)
-find_package(Qt6Core ${Qt6_REQUIRED_VERSION} REQUIRED)
-# if (NOT TARGET Qt6)
-# endif ()
+find_package(Qt5 COMPONENTS Core REQUIRED)
 
 if (NOT TARGET xeus AND NOT TARGET xeus-static)
     find_package(xeus ${xeus_REQUIRED_VERSION} REQUIRED)
@@ -169,8 +166,7 @@ macro(xq_create_target target_name linkage output_name)
         PUBLIC nlohmann_json::nlohmann_json
         PUBLIC xtl
         PUBLIC xeus
-        PUBLIC Qt6::Widgets
-        PUBLIC Qt6::Core
+        PUBLIC Qt5::Core
     )
 
     target_link_libraries(${target_name} PUBLIC OpenSSL::Crypto)
@@ -257,9 +253,6 @@ macro(xq_create_target target_name linkage output_name)
     if (XQ_STATIC_DEPENDENCIES AND CMAKE_DL_LIBS)
         target_link_libraries(${target_name} PRIVATE ${CMAKE_DL_LIBS} util rt)
     endif ()
-
-    TARGET_LINK_LIBRARIES(${target_name} ${QT_LIBRARIES})
-
 
 endmacro()
 

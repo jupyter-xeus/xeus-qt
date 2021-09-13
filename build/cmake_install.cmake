@@ -48,18 +48,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
-      execute_process(COMMAND /usr/bin/install_name_tool
-        -delete_rpath "/Users/mariana/minirhumba/envs/excuseme/lib"
-        "${file}")
-      execute_process(COMMAND /usr/bin/install_name_tool
-        -delete_rpath "/usr/local/opt/qt/lib"
-        "${file}")
-      execute_process(COMMAND /usr/bin/install_name_tool
-        -add_rpath "/Users/mariana/minirhumba/envs/excuseme/lib"
-        "${file}")
-      execute_process(COMMAND /usr/bin/install_name_tool
-        -add_rpath " /Users/mariana/minirhumba/envs/excuseme/lib"
-        "${file}")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -x "${file}")
       endif()
@@ -71,18 +59,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/mariana/dev/xq/build/libxq.dylib")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libxq.dylib" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libxq.dylib")
-    execute_process(COMMAND /usr/bin/install_name_tool
-      -delete_rpath "/Users/mariana/minirhumba/envs/excuseme/lib"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libxq.dylib")
-    execute_process(COMMAND /usr/bin/install_name_tool
-      -delete_rpath "/usr/local/opt/qt/lib"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libxq.dylib")
-    execute_process(COMMAND /usr/bin/install_name_tool
-      -add_rpath "/Users/mariana/minirhumba/envs/excuseme/lib"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libxq.dylib")
-    execute_process(COMMAND /usr/bin/install_name_tool
-      -add_rpath " /Users/mariana/minirhumba/envs/excuseme/lib"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libxq.dylib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -x "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libxq.dylib")
     endif()

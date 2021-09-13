@@ -225,87 +225,71 @@ CMakeFiles/xq.dir/src/xqGenericInterpreter.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__bit_reference \
   /Users/mariana/dev/xq/include/xq/xqGenericInterpreter.hpp \
   /Users/mariana/dev/xq/include/xq/xqKernelModule.hpp \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/QObject \
-  /usr/local/opt/qt/lib/QtCore.framework/Headers/qobject.h \
-  /usr/local/opt/qt/include/QtCore/qobjectdefs.h \
-  /usr/local/opt/qt/include/QtCore/qnamespace.h \
-  /usr/local/opt/qt/include/QtCore/qglobal.h \
-  /usr/local/opt/qt/include/QtCore/qconfig.h \
-  /usr/local/opt/qt/include/QtCore/qtcore-config.h \
-  /usr/local/opt/qt/include/QtCore/qsystemdetection.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/QObject \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qobject.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qobjectdefs.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qnamespace.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qglobal.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qconfig.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qtcore-config.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qsystemdetection.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/TargetConditionals.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/AvailabilityMacros.h \
-  /usr/local/opt/qt/include/QtCore/qprocessordetection.h \
-  /usr/local/opt/qt/include/QtCore/qcompilerdetection.h \
-  /usr/local/opt/qt/include/QtCore/qtypeinfo.h \
-  /usr/local/opt/qt/include/QtCore/qcontainerfwd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/variant \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/array \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/optional \
-  /usr/local/opt/qt/include/QtCore/qsysinfo.h \
-  /usr/local/opt/qt/include/QtCore/qlogging.h \
-  /usr/local/opt/qt/include/QtCore/qflags.h \
-  /usr/local/opt/qt/include/QtCore/qatomic.h \
-  /usr/local/opt/qt/include/QtCore/qbasicatomic.h \
-  /usr/local/opt/qt/include/QtCore/qatomic_cxx11.h \
-  /usr/local/opt/qt/include/QtCore/qgenericatomic.h \
-  /usr/local/opt/qt/include/QtCore/qglobalstatic.h \
-  /usr/local/opt/qt/include/QtCore/qmutex.h \
-  /usr/local/opt/qt/include/QtCore/qnumeric.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qprocessordetection.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qcompilerdetection.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qtypeinfo.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qsysinfo.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qlogging.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qflags.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qatomic.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qbasicatomic.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qatomic_cxx11.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qgenericatomic.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qglobalstatic.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qmutex.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qnumeric.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qversiontagging.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qobjectdefs_impl.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstring.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qchar.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qbytearray.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qrefcount.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qarraydata.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringliteral.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringalgorithms.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringview.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qlist.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qalgorithms.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qiterator.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qhashfunctions.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qpair.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/numeric \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/math.h \
-  /usr/local/opt/qt/include/QtCore/qversiontagging.h \
-  /usr/local/opt/qt/include/QtCore/qtmetamacros.h \
-  /usr/local/opt/qt/include/QtCore/qobjectdefs_impl.h \
-  /usr/local/opt/qt/include/QtCore/qstring.h \
-  /usr/local/opt/qt/include/QtCore/qchar.h \
-  /usr/local/opt/qt/include/QtCore/qstringview.h \
-  /usr/local/opt/qt/include/QtCore/qbytearray.h \
-  /usr/local/opt/qt/include/QtCore/qrefcount.h \
-  /usr/local/opt/qt/include/QtCore/qarraydata.h \
-  /usr/local/opt/qt/include/QtCore/qpair.h \
-  /usr/local/opt/qt/include/QtCore/qarraydatapointer.h \
-  /usr/local/opt/qt/include/QtCore/qarraydataops.h \
-  /usr/local/opt/qt/include/QtCore/qcontainertools_impl.h \
-  /usr/local/opt/qt/include/QtCore/qbytearrayalgorithms.h \
-  /usr/local/opt/qt/include/QtCore/qbytearrayview.h \
-  /usr/local/opt/qt/include/QtCore/qstringliteral.h \
-  /usr/local/opt/qt/include/QtCore/qstringalgorithms.h \
-  /usr/local/opt/qt/include/QtCore/qanystringview.h \
-  /usr/local/opt/qt/include/QtCore/qutf8stringview.h \
-  /usr/local/opt/qt/include/QtCore/qstringtokenizer.h \
-  /usr/local/opt/qt/include/QtCore/qlist.h \
-  /usr/local/opt/qt/include/QtCore/qhashfunctions.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/numeric \
-  /usr/local/opt/qt/include/QtCore/qiterator.h \
-  /usr/local/opt/qt/include/QtCore/qbytearraylist.h \
-  /usr/local/opt/qt/include/QtCore/qstringlist.h \
-  /usr/local/opt/qt/include/QtCore/qalgorithms.h \
-  /usr/local/opt/qt/include/QtCore/qstringmatcher.h \
-  /usr/local/opt/qt/include/QtCore/qscopedpointer.h \
-  /usr/local/opt/qt/include/QtCore/qmetatype.h \
-  /usr/local/opt/qt/include/QtCore/qcompare.h \
-  /usr/local/opt/qt/include/QtCore/qvarlengtharray.h \
-  /usr/local/opt/qt/include/QtCore/qdatastream.h \
-  /usr/local/opt/qt/include/QtCore/qiodevicebase.h \
-  /usr/local/opt/qt/include/QtCore/qiterable.h \
-  /usr/local/opt/qt/include/QtCore/qmetacontainer.h \
-  /usr/local/opt/qt/include/QtCore/qcontainerinfo.h \
-  /usr/local/opt/qt/include/QtCore/qtaggedpointer.h \
-  /usr/local/opt/qt/include/QtCore/qmath.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/list \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qbytearraylist.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringlist.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qregexp.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qstringmatcher.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qscopedpointer.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qmetatype.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qvarlengtharray.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qcontainerfwd.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__split_buffer \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__node_handle \
-  /usr/local/opt/qt/include/QtCore/qobject_impl.h \
-  /usr/local/opt/qt/include/QtCore/qproperty.h \
-  /usr/local/opt/qt/include/QtCore/qshareddata.h \
-  /usr/local/opt/qt/include/QtCore/qpropertyprivate.h \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xinterpreter.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xcomm.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/optional \
+  /Users/mariana/minirhumba/envs/excuseme/include/qt/QtCore/qobject_impl.h \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xkernel.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xdebugger.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/zmq.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/zmq.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iomanip \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/sstream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/array \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/json.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/adl_serializer.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/conversions/from_json.hpp \
@@ -348,18 +332,19 @@ CMakeFiles/xq.dir/src/xqGenericInterpreter.cpp.o: \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/ordered_map.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/detail/macro_unscope.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xguid.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xbasic_fixed_string.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/sstream \
-  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xhash.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xtl_config.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/xeus/xeus.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xmessage.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xauthentication.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/zmq.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/zmq.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iomanip \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xkernel_configuration.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xcontrol_messenger.hpp \
   /Users/mariana/minirhumba/envs/excuseme/include/zmq_addon.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/deque \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xcontrol_messenger.hpp \
-  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xhistory_manager.hpp
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xhistory_manager.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xinterpreter.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xcomm.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xguid.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xbasic_fixed_string.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xhash.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xtl/xtl_config.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xmessage.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xauthentication.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xserver.hpp \
+  /Users/mariana/minirhumba/envs/excuseme/include/xeus/xlogger.hpp
