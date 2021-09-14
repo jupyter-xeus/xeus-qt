@@ -108,7 +108,6 @@ set(XQ_HEADERS
 
 set(XQ_SOURCES
     ${XQ_SOURCE_DIR}/xqServer.cpp
-    ${XQ_SOURCE_DIR}/xqKernelModule.cpp
    )
 
 # Targets and link
