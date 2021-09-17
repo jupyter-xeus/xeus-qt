@@ -1,6 +1,8 @@
 #ifndef XQ_SERVER_UTILS_HPP
 #define XQ_SERVER_UTILS_HPP
 
+#include <iostream>
+
 // xeus includes
 #include <xeus/xserver_zmq.hpp>
 #include <xeus/xkernel_configuration.hpp>
@@ -34,6 +36,7 @@ protected:
 
 std::unique_ptr<xeus::xserver> make_xqServer(zmq::context_t& context,
                                              const xeus::xconfiguration& config);
+
 
 
 #endif

@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     history_manager_ptr hist = xeus::make_in_memory_history_manager();
 
     // Create xkernel using a Qt compatible server
-    xeus::xkernel kernel("mari-sqlite",
+    xeus::xkernel kernel(xeus::get_user_name(),
                          std::move(interpreter),
                          std::move(hist),
                          nullptr,
@@ -50,12 +50,14 @@ int main(int argc, char *argv[])
 
     QApplication application(argc, argv);
     kernel.start();
-    std::cout << kernel_info;
     QMainWindow mainWindow;
     mainWindow.resize(320, 240);
-    QLabel *label = new QLabel(&mainWindow);
+    QLabel* label = new QLabel(&mainWindow);
     label->setText(QString::fromStdString(kernel_info));
+    label->setWordWrap(true);
+    mainWindow.setCentralWidget(label);
     mainWindow.show();
-    return application.exec();
-    // label.setWordWrap(true);
+    application.exec();
+    delete label;
+    return 0;
 }

@@ -22,11 +22,9 @@ xqServer::xqServer(zmq::context_t& context,
     // 10ms interval is short enough so that users will not notice significant latency
     // yet it is long enough to minimize CPU load caused by polling.
     // 50ms causes too long delay in interactive widgets that handle mousemove events.
-    std::cout << "Entering constructor of xserver" << std::endl;
     m_pollTimer = new QTimer();
     m_pollTimer->setInterval(10);
     QObject::connect(m_pollTimer, &QTimer::timeout, [=]() { poll(0); });
-    std::cout << "Exiting constructor of xserver"  << std::endl;
 }
 
 xqServer::~xqServer()
@@ -37,23 +35,18 @@ xqServer::~xqServer()
 
 void xqServer::start_impl(zmq::multipart_t& message)
 {
-    std::cout << "Starting Jupyter kernel server" << std::endl;
-
     start_publisher_thread();
     start_heartbeat_thread();
 
     m_request_stop = false;
 
-    std::cout << "Starting polltimer" << std::endl;
     m_pollTimer->start();
-    std::cout << "After starting polltimer" << std::endl;
 
     publish(message, xeus::channel::SHELL);
 }
 
 void xqServer::stop_impl()
 {
-    std::cout << "Stopping Jupyter kernel server" << std::endl;
     this->xserver_zmq::stop_impl();
     m_pollTimer->stop();
     stop_channels();
