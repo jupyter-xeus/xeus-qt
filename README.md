@@ -1,7 +1,15 @@
 ## Creating the environment
 
+Qt is always refering to Qt5.
+
 ```
-mamba install cmake pkg-config zeromq cppzmq xtl OpenSSL nlohmann_json qt5 xeus-sqlite -c conda-forge
+mamba install cmake pkg-config zeromq cppzmq xtl OpenSSL nlohmann_json qt -c conda-forge
+```
+
+To run the example:
+
+```
+mamba install xeus-sqlite xproperty cpp-tabulate
 ```
 
 ## Building from source

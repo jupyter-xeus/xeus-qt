@@ -23,14 +23,18 @@ int main(int argc, char *argv[])
     using history_manager_ptr = std::unique_ptr<xeus::xhistory_manager>;
     history_manager_ptr hist = xeus::make_in_memory_history_manager();
 
+    auto context = xeus::make_context<zmq::context_t>();
+
     // Create xkernel using a Qt compatible server
     xeus::xkernel kernel(xeus::get_user_name(),
+                         std::move(context),
                          std::move(interpreter),
+                         make_xqServer,
                          std::move(hist),
-                         nullptr,
-                         make_xqServer);
+                         nullptr);
 
     const auto& config = kernel.get_config();
+
     std::string kernel_info;
     kernel_info = "Starting xeus-python kernel...\n\n"
                     "If you want to connect to this kernel from an other client, just copy"

@@ -3,7 +3,11 @@
 
 #include <iostream>
 
+#include "zmq.hpp"
+#include "zmq_addon.hpp"
+
 // xeus includes
+#include <xeus/xmessage.hpp>
 #include <xeus/xserver_zmq.hpp>
 #include <xeus/xkernel_configuration.hpp>
 
@@ -21,7 +25,8 @@ public:
     using socket_notifier_ptr = QSharedPointer<QSocketNotifier>;
 
     xqServer(zmq::context_t& context,
-             const xeus::xconfiguration& config);
+             const xeus::xconfiguration& config,
+             nl::json::error_handler_t eh);
     virtual ~xqServer();
 
     void setPollIntervalSec(double intervalSec);
@@ -29,14 +34,13 @@ public:
 
 protected:
 
-    void start_impl(zmq::multipart_t& message) override;
+    void start_impl(xeus::xpub_message message) override;
     void stop_impl() override;
     QTimer* m_pollTimer;
 };
 
 std::unique_ptr<xeus::xserver> make_xqServer(zmq::context_t& context,
-                                             const xeus::xconfiguration& config);
-
-
+                                             const xeus::xconfiguration& config,
+                                             nl::json::error_handler_t eh);
 
 #endif

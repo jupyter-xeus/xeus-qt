@@ -16,8 +16,9 @@
 #include <QTimer>
 
 xqServer::xqServer(zmq::context_t& context,
-                   const xeus::xconfiguration& c)
-    : xserver_zmq(context, c)
+                   const xeus::xconfiguration& c,
+                   nl::json::error_handler_t eh)
+    : xserver_zmq(context, c, eh)
 {
     // 10ms interval is short enough so that users will not notice significant latency
     // yet it is long enough to minimize CPU load caused by polling.
@@ -33,7 +34,7 @@ xqServer::~xqServer()
     delete m_pollTimer;
 }
 
-void xqServer::start_impl(zmq::multipart_t& message)
+void xqServer::start_impl(xeus::xpub_message message)
 {
     start_publisher_thread();
     start_heartbeat_thread();
@@ -42,7 +43,7 @@ void xqServer::start_impl(zmq::multipart_t& message)
 
     m_pollTimer->start();
 
-    publish(message, xeus::channel::SHELL);
+    publish(std::move(message), xeus::channel::SHELL);
 }
 
 void xqServer::stop_impl()
@@ -54,9 +55,10 @@ void xqServer::stop_impl()
 }
 
 std::unique_ptr<xeus::xserver> make_xqServer(zmq::context_t& context,
-                                             const xeus::xconfiguration& config)
+                                             const xeus::xconfiguration& config,
+                                             nl::json::error_handler_t eh)
 {
-    return std::make_unique<xqServer>(context, config);
+    return std::make_unique<xqServer>(context, config, eh);
 }
 
 void xqServer::setPollIntervalSec(double intervalSec)

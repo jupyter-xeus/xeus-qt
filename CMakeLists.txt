@@ -34,7 +34,7 @@ foreach(ver ${xq_version_defines})
 endforeach()
 set(XQ_VERSION
     ${XQ_VERSION_MAJOR}.${XQ_VERSION_MINOR}.${XQ_VERSION_PATCH})
-message(STATUS "xeus version: v${XQ_VERSION}")
+message(STATUS "xq version: v${XQ_VERSION}")
 
 # Binary version
 # See the following URL for explanations about the binary versionning
@@ -48,7 +48,7 @@ foreach(ver ${xq_version_defines})
 endforeach()
 set(XQ_BINARY_VERSION
     ${XQ_BINARY_CURRENT}.${XQ_BINARY_REVISION}.${XQ_BINARY_AGE})
-message(STATUS "xeus binary version: v${XQ_BINARY_VERSION}")
+message(STATUS "xq binary version: v${XQ_BINARY_VERSION}")
 
 
 # Dependencies
