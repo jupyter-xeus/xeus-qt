@@ -1,12 +1,14 @@
-cmake_minimum_required(VERSION 3.8)
-project(xq_example)
+cmake_minimum_required(VERSION 3.0)
 
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")
-set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib; ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
+project(xqseme VERSION 0.0.1)
 
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+
+if(APPLE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -stdlib=libc++ -mmacosx-version-min=10.8")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -headerpad_max_install_names")
+endif()
 
 set(nlohmann_json_REQUIRED_VERSION 3.2.0)
 set(xtl_REQUIRED_VERSION 0.7)
@@ -23,10 +25,38 @@ find_package(xeus-sqlite REQUIRED)
 find_package(xq REQUIRED)
 find_package(zeromq ${zeromq_REQUIRED_VERSION} QUIET)
 
-add_executable(xq_exe main.cpp)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
+# Sources
+file(GLOB SOURCES "*.cpp")
+file(GLOB HEADERS "*.h")
+file(GLOB UI_SOURCES "*.ui")
+
+qt5_wrap_ui(UI_HEADERS ${UI_SOURCES})
+
+if(WIN32)
+    set(APP_ICON ${CMAKE_CURRENT_SOURCE_DIR}/icon.rc)
+elseif(APPLE)
+    set(MACOSX_BUNDLE_ICON icon.icns)
+    set(APP_ICON ${CMAKE_CURRENT_SOURCE_DIR}/icon.icns)
+    set_source_files_properties(${APP_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
+endif()
+
+if(WIN32)
+    set(APP_BUNDLE WIN32)
+elseif(APPLE)
+    set(APP_BUNDLE MACOSX_BUNDLE)
+endif()
+
+add_executable(${PROJECT_NAME} ${APP_BUNDLE} ${APP_ICON} ${SOURCES} ${HEADERS} ${UI_HEADERS})
+
+if(APPLE)
+    set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/AppleInfo.plist)
+endif()
 
 target_link_libraries(
-    xq_exe
+    ${PROJECT_NAME}
     PUBLIC ${CPPZMQ_TARGET_NAME}
     PUBLIC nlohmann_json::nlohmann_json
     PUBLIC xtl
@@ -37,5 +67,6 @@ target_link_libraries(
     PUBLIC xq
 )
 
-install(TARGETS xq_exe
-        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+#MacOS bug https://github.com/lloyd/yajl/issues/201
+install(TARGETS ${PROJECT_NAME}
+        BUNDLE DESTINATION bin)

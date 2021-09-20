@@ -58,6 +58,5 @@ int main(int argc, char *argv[])
     mainWindow.setCentralWidget(label);
     mainWindow.show();
     application.exec();
-    delete label;
     return 0;
 }
