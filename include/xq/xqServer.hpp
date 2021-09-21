@@ -39,7 +39,7 @@ protected:
     QTimer* m_pollTimer;
 };
 
-std::unique_ptr<xeus::xserver> make_xqServer(zmq::context_t& context,
+std::unique_ptr<xeus::xserver> make_xqServer(xeus::xcontext& context,
                                              const xeus::xconfiguration& config,
                                              nl::json::error_handler_t eh);
 

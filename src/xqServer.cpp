@@ -54,11 +54,11 @@ void xqServer::stop_impl()
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
 }
 
-std::unique_ptr<xeus::xserver> make_xqServer(zmq::context_t& context,
+std::unique_ptr<xeus::xserver> make_xqServer(xeus::xcontext& context,
                                              const xeus::xconfiguration& config,
                                              nl::json::error_handler_t eh)
 {
-    return std::make_unique<xqServer>(context, config, eh);
+    return std::make_unique<xqServer>(context.get_wrapped_context<zmq::context_t>(), config, eh);
 }
 
 void xqServer::setPollIntervalSec(double intervalSec)
