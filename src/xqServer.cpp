@@ -10,6 +10,7 @@
 
 // xeus includes
 #include <xeus/xserver_zmq.hpp>
+#include "xeus/xzmq_serializer.hpp"
 
 // Qt includes
 #include <QDebug>
@@ -26,16 +27,19 @@ xqServer::xqServer(zmq::context_t& context,
     m_pollTimer = new QTimer();
     m_pollTimer->setInterval(10);
     QObject::connect(m_pollTimer, &QTimer::timeout, [=]() { poll(0); });
+    std::cout << "initializing the server" << std::endl;
 }
 
 xqServer::~xqServer()
 {
+    std::cout << "destroying the server" << std::endl;
     m_pollTimer->stop();
     delete m_pollTimer;
 }
 
 void xqServer::start_impl(xeus::xpub_message message)
 {
+    std::cout << "start_impl" << std::endl;
     start_publisher_thread();
     start_heartbeat_thread();
 
@@ -44,13 +48,23 @@ void xqServer::start_impl(xeus::xpub_message message)
     m_pollTimer->start();
 
     publish(std::move(message), xeus::channel::SHELL);
+
+    while (!m_request_stop)
+    {
+        poll(-1);
+    }
+
+    stop_channels();
+
+    // std::exit(0);
 }
 
 void xqServer::stop_impl()
 {
+    std::cout << "stop_impl" << std::endl;
     this->xserver_zmq::stop_impl();
     m_pollTimer->stop();
-    stop_channels();
+    // stop_channels();
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
 }
 
@@ -58,6 +72,7 @@ std::unique_ptr<xeus::xserver> make_xqServer(xeus::xcontext& context,
                                              const xeus::xconfiguration& config,
                                              nl::json::error_handler_t eh)
 {
+    std::cout << "making xqServer" << std::endl;
     return std::make_unique<xqServer>(context.get_wrapped_context<zmq::context_t>(), config, eh);
 }
 
@@ -70,3 +85,39 @@ double xqServer::pollIntervalSec()
 {
     return m_pollTimer->interval() / 1000.0;
 }
+
+void xqServer::poll(long timeout) {
+    std::cout << "🔥" << std::endl;
+};
+
+// void xqServer::poll(long timeout)
+// {
+//     std::cout << "🍉" << std::endl;
+//     zmq::pollitem_t items[]
+//         = { { m_controller, 0, ZMQ_POLLIN, 0 }, { m_shell, 0, ZMQ_POLLIN, 0 } };
+
+//     zmq::poll(&items[0], 2, std::chrono::milliseconds(timeout));
+
+//     try
+//     {
+//         if (items[0].revents & ZMQ_POLLIN)
+//         {
+//             zmq::multipart_t wire_msg;
+//             wire_msg.recv(m_controller);
+//             xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
+//             xeus::xserver::notify_control_listener(std::move(msg));
+//         }
+
+//         if (!m_request_stop && (items[1].revents & ZMQ_POLLIN))
+//         {
+//             zmq::multipart_t wire_msg;
+//             wire_msg.recv(m_shell);
+//             xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
+//             xeus::xserver::notify_shell_listener(std::move(msg));
+//         }
+//     }
+//     catch (std::exception& e)
+//     {
+//         std::cerr << e.what() << std::endl;
+//     }
+// }

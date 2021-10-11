@@ -33,6 +33,7 @@ public:
     double pollIntervalSec();
 
 protected:
+    void poll(long timeout);
 
     void start_impl(xeus::xpub_message message) override;
     void stop_impl() override;
