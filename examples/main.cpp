@@ -17,6 +17,7 @@
 
 void create_json_file(std::string kernel_info)
 {
+    
     std::ofstream kernel_json("kernel.json");
     kernel_json << kernel_info;
     kernel_json.close();
@@ -73,7 +74,7 @@ int main(int argc, char *argv[])
     std::cout << "not getting any stdout?" << std::endl;
     mainWindow.setCentralWidget(label);
     QPushButton btn("Create kernel file", &mainWindow);
-    // QObject::connect(&btn, &QPushButton::clicked, [&](){create_json_file(kernel_info);});
+    QObject::connect(&btn, &QPushButton::clicked, [&](){create_json_file(kernel_info);});
     mainWindow.show();
     std::cout << "between show and exec" << std::endl;
     application.exec();

@@ -39,7 +39,6 @@ xqServer::~xqServer()
 
 void xqServer::start_impl(xeus::xpub_message message)
 {
-    std::cout << "start_impl" << std::endl;
     start_publisher_thread();
     start_heartbeat_thread();
 
@@ -47,26 +46,52 @@ void xqServer::start_impl(xeus::xpub_message message)
 
     m_pollTimer->start();
 
+    // while (!m_request_stop)
+    // {
+    //     poll(-1);
+    // }
+
     publish(std::move(message), xeus::channel::SHELL);
-
-    while (!m_request_stop)
-    {
-        poll(-1);
-    }
-
-    stop_channels();
-
-    // std::exit(0);
 }
 
 void xqServer::stop_impl()
 {
-    std::cout << "stop_impl" << std::endl;
     this->xserver_zmq::stop_impl();
     m_pollTimer->stop();
-    // stop_channels();
+    stop_channels();
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
 }
+
+// void xqServer::start_impl(xeus::xpub_message message)
+// {
+//     std::cout << "start_impl" << std::endl;
+//     start_publisher_thread();
+//     start_heartbeat_thread();
+
+//     m_request_stop = false;
+
+//     m_pollTimer->start();
+
+//     publish(std::move(message), xeus::channel::SHELL);
+
+    // while (!m_request_stop)
+    // {
+    //     poll(-1);
+    // }
+
+//     stop_channels();
+
+//     // std::exit(0);
+// }
+
+// void xqServer::stop_impl()
+// {
+//     std::cout << "stop_impl" << std::endl;
+//     this->xserver_zmq::stop_impl();
+//     m_pollTimer->stop();
+//     // stop_channels();
+//     // std::this_thread::sleep_for(std::chrono::milliseconds(50));
+// }
 
 std::unique_ptr<xeus::xserver> make_xqServer(xeus::xcontext& context,
                                              const xeus::xconfiguration& config,
@@ -86,9 +111,9 @@ double xqServer::pollIntervalSec()
     return m_pollTimer->interval() / 1000.0;
 }
 
-void xqServer::poll(long timeout) {
-    std::cout << "🔥" << std::endl;
-};
+// void xqServer::poll(long timeout) {
+//     std::cout << "🔥" << std::endl;
+// };
 
 // void xqServer::poll(long timeout)
 // {
