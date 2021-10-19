@@ -104,10 +104,12 @@ endif ()
 set(XQ_HEADERS
     ${XQ_INCLUDE_DIR}/xq/xq.hpp
     ${XQ_INCLUDE_DIR}/xq/xqServer.hpp
+    ${XQ_INCLUDE_DIR}/xq/xqQtPoller.hpp
     )
 
 set(XQ_SOURCES
     ${XQ_SOURCE_DIR}/xqServer.cpp
+    ${XQ_SOURCE_DIR}/xqQtPoller.cpp
    )
 
 # Targets and link

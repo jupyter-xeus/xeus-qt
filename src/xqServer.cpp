@@ -1,4 +1,5 @@
 #include "xq/xqServer.hpp"
+#include "xq/xqQtPoller.hpp"
 
 // STL includes
 #include <memory>
@@ -24,10 +25,10 @@ xqServer::xqServer(zmq::context_t& context,
     // 10ms interval is short enough so that users will not notice significant latency
     // yet it is long enough to minimize CPU load caused by polling.
     // 50ms causes too long delay in interactive widgets that handle mousemove events.
-    m_pollTimer = new QTimer();
-    m_pollTimer->setInterval(10);
-    QObject::connect(m_pollTimer, &QTimer::timeout, [=]() { poll(0); });
-    std::cout << "initializing the server" << std::endl;
+    // m_pollTimer = new QTimer();
+    // m_pollTimer->setInterval(10);
+    // QObject::connect(m_pollTimer, &QTimer::timeout, [=]() { poll(0); });
+    // std::cout << "initializing the server" << std::endl;
 }
 
 xqServer::~xqServer()
@@ -46,12 +47,18 @@ void xqServer::start_impl(xeus::xpub_message message)
 
     m_pollTimer->start();
 
+    startWorkInAThread();
+
+    publish(std::move(message), xeus::channel::SHELL);
+
     // while (!m_request_stop)
     // {
     //     poll(-1);
     // }
 
-    publish(std::move(message), xeus::channel::SHELL);
+    //     stop_channels();
+
+    //     std::exit(0);
 }
 
 void xqServer::stop_impl()
@@ -115,9 +122,10 @@ double xqServer::pollIntervalSec()
 //     std::cout << "🔥" << std::endl;
 // };
 
+
 // void xqServer::poll(long timeout)
 // {
-//     std::cout << "🍉" << std::endl;
+//     // std::cout << "🍉" << std::endl;
 //     zmq::pollitem_t items[]
 //         = { { m_controller, 0, ZMQ_POLLIN, 0 }, { m_shell, 0, ZMQ_POLLIN, 0 } };
 
@@ -130,7 +138,7 @@ double xqServer::pollIntervalSec()
 //             zmq::multipart_t wire_msg;
 //             wire_msg.recv(m_controller);
 //             xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
-//             xeus::xserver::notify_control_listener(std::move(msg));
+//             // xeus::xserver::notify_control_listener(std::move(msg));
 //         }
 
 //         if (!m_request_stop && (items[1].revents & ZMQ_POLLIN))
@@ -138,7 +146,7 @@ double xqServer::pollIntervalSec()
 //             zmq::multipart_t wire_msg;
 //             wire_msg.recv(m_shell);
 //             xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
-//             xeus::xserver::notify_shell_listener(std::move(msg));
+//             // xeus::xserver::notify_shell_listener(std::move(msg));
 //         }
 //     }
 //     catch (std::exception& e)
@@ -146,3 +154,21 @@ double xqServer::pollIntervalSec()
 //         std::cerr << e.what() << std::endl;
 //     }
 // }
+
+void xqServer::startWorkInAThread()
+{
+    WorkerThread *workerThread = new WorkerThread(this, m_controller, m_shell);
+    connect(workerThread, &WorkerThread::resultReadyControl, this, &xqServer::notify_control_listener);
+    connect(workerThread, &WorkerThread::resultReadyShell, this, &xqServer::notify_shell_listener);
+    workerThread->start();
+}
+
+void xqServer::notify_control_listener(xeus::xmessage msg)
+{
+    xeus::xserver::notify_control_listener(std::move(msg));
+}
+
+void xqServer::notify_shell_listener(xeus::xmessage msg)
+{
+    xeus::xserver::notify_shell_listener(std::move(msg));
+}

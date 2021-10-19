@@ -18,7 +18,7 @@
 
 class QTimer;
 
-class xqServer : public xeus::xserver_zmq
+class xqServer : public xeus::xserver_zmq, public QObject
 {
 
 public:
@@ -33,11 +33,14 @@ public:
     double pollIntervalSec();
 
 protected:
-    // void poll(long timeout);
-
     void start_impl(xeus::xpub_message message) override;
     void stop_impl() override;
+    void poll(long timeout);
     QTimer* m_pollTimer;
+protected slots:
+    void notify_control_listener(xeus::xmessage msg);
+    void notify_shell_listener(xeus::xmessage msg);
+    void startWorkInAThread();
 };
 
 std::unique_ptr<xeus::xserver> make_xqServer(xeus::xcontext& context,

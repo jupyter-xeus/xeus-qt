@@ -8,6 +8,7 @@
 #include <QString>
 
 #include "xq/xqServer.hpp"
+#include "xq/xqQtPoller.hpp"
 
 #include "xeus/xkernel.hpp"
 #include "xeus/xkernel_configuration.hpp"
