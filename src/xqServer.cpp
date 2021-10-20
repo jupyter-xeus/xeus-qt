@@ -157,7 +157,11 @@ double xqServer::pollIntervalSec()
 
 void xqServer::startWorkInAThread()
 {
-    WorkerThread *workerThread = new WorkerThread(this, m_controller, m_shell);
+    WorkerThread *workerThread = new WorkerThread(this,
+                                                  m_shell,
+                                                  m_controller,
+                                                  p_auth,
+                                                  m_request_stop);
     connect(workerThread, &WorkerThread::resultReadyControl, this, &xqServer::notify_control_listener);
     connect(workerThread, &WorkerThread::resultReadyShell, this, &xqServer::notify_shell_listener);
     workerThread->start();
