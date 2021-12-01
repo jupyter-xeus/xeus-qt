@@ -2,21 +2,29 @@
 
 #include "xeus/xserver_zmq.hpp"
 #include "xeus/xzmq_serializer.hpp"
+#include "xeus/xmiddleware.hpp"
 
+// zmq includes
+#include <zmq_addon.hpp>
 
 //this thread can never outlive the server thread... cause these sockets should be destroyed there and that
 //would leave us with some hanging refs
 WorkerThread::WorkerThread(QObject* parent,
-                           zmq::socket_t shell,
-                           zmq::socket_t controller,
-                           std::unique_ptr<xeus::xauthentication> auth,
-                           bool request_stop)
-    : QThread(parent)
+                           zmq::context_t& context,
+                           const xeus::xconfiguration& config,
+                           xeus::xauthentication * auth,
+                           bool * request_stop)
+    : 
+    QThread(parent),
+    m_shell(context, zmq::socket_type::router),
+    m_controller(context, zmq::socket_type::router)
 {
-    m_controller = &controller;
-    m_shell = &shell;
-    p_auth = &auth;
-    m_request_stop = &request_stop;
+
+    std::cout<<"INIT SOCKETS!\n";
+    xeus::init_socket(m_shell, config.m_transport, config.m_ip, config.m_shell_port);
+    xeus::init_socket(m_controller, config.m_transport, config.m_ip, config.m_control_port);
+    p_auth = auth;
+    p_request_stop = request_stop;
 }
 
 void WorkerThread::run()
@@ -25,31 +33,37 @@ void WorkerThread::run()
         = { { m_controller, 0, ZMQ_POLLIN, 0 }, { m_shell, 0, ZMQ_POLLIN, 0 } };
 
     while(true)
-    {        // timeout = -1, 
-            //i should write a condition to end this while, dunno what yet, i think it should be the emits, so i can just break?
-    zmq::poll(&items[0], 2, -1);
+    {        
+        std::cout<<"polling...\n";
+        // timeout = -1, 
+        // i should write a condition to end this while, dunno what yet, i think it should be the emits, so i can just break?
+        
 
-    try
-    {
-        if (items[0].revents & ZMQ_POLLIN)
+        std::cout<<"POLL\n";
+        zmq::poll(&items[0], 2, -1);
+        std::cout<<"POLL DONE\n";
+        try
         {
-            zmq::multipart_t wire_msg;
-            wire_msg.recv(*m_controller);
-            xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, **p_auth);
-            emit resultReadyControl(msg);
-        }
+            if (items[0].revents & ZMQ_POLLIN)
+            {
+                zmq::multipart_t * wire_msg = new zmq::multipart_t();
+                wire_msg->recv(m_controller);
+                // xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
+                emit resultReadyControl(wire_msg);
+            }
 
-        if (!m_request_stop && (items[1].revents & ZMQ_POLLIN))
-        {
-            zmq::multipart_t wire_msg;
-            wire_msg.recv(*m_shell);
-            xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, **p_auth);
-            emit resultReadyShell(msg);
+            if (! (*p_request_stop) && (items[1].revents & ZMQ_POLLIN))
+            {
+                zmq::multipart_t * wire_msg = new zmq::multipart_t(); 
+                wire_msg->recv(m_shell);
+                // xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
+                
+                emit resultReadyShell(wire_msg);
+            }
         }
-    }
-    catch (std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
+        catch (std::exception& e)
+        {
+            std::cerr << e.what() << std::endl;
+        }
     }
 }
