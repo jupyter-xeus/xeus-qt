@@ -1,5 +1,6 @@
 #include "xq/xqQtPoller.hpp"
 
+
 #include "xeus/xserver_zmq.hpp"
 #include "xeus/xzmq_serializer.hpp"
 #include "xeus/xmiddleware.hpp"
@@ -7,63 +8,65 @@
 // zmq includes
 #include <zmq_addon.hpp>
 
-//this thread can never outlive the server thread... cause these sockets should be destroyed there and that
-//would leave us with some hanging refs
+
+
 WorkerThread::WorkerThread(QObject* parent,
-                           zmq::context_t& context,
-                           const xeus::xconfiguration& config,
-                           xeus::xauthentication * auth,
-                           bool * request_stop)
+                           zmq::socket_t * p_shell,
+                           zmq::socket_t * p_controller,
+                           xeus::xauthentication * auth)
     : 
     QThread(parent),
-    m_shell(context, zmq::socket_type::router),
-    m_controller(context, zmq::socket_type::router)
+    p_shell(p_shell),
+    p_controller(p_controller),
+    m_request_stop(false)
 {
 
-    std::cout<<"INIT SOCKETS!\n";
-    xeus::init_socket(m_shell, config.m_transport, config.m_ip, config.m_shell_port);
-    xeus::init_socket(m_controller, config.m_transport, config.m_ip, config.m_control_port);
     p_auth = auth;
-    p_request_stop = request_stop;
+}
+void WorkerThread::stop()
+{   
+    m_request_stop = true;  
 }
 
 void WorkerThread::run()
 {
     zmq::pollitem_t items[]
-        = { { m_controller, 0, ZMQ_POLLIN, 0 }, { m_shell, 0, ZMQ_POLLIN, 0 } };
+        = { { *p_controller, 0, ZMQ_POLLIN, 0 }, { *p_shell, 0, ZMQ_POLLIN, 0 } };
 
-    while(true)
+    while(!m_request_stop.load())
     {        
-        std::cout<<"polling...\n";
-        // timeout = -1, 
-        // i should write a condition to end this while, dunno what yet, i think it should be the emits, so i can just break?
-        
 
-        std::cout<<"POLL\n";
-        zmq::poll(&items[0], 2, -1);
-        std::cout<<"POLL DONE\n";
-        try
+        zmq::poll(&items[0], 2, std::chrono::milliseconds(10));
         {
-            if (items[0].revents & ZMQ_POLLIN)
-            {
-                zmq::multipart_t * wire_msg = new zmq::multipart_t();
-                wire_msg->recv(m_controller);
-                // xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
-                emit resultReadyControl(wire_msg);
-            }
+            try{
+                if (items[0].revents & ZMQ_POLLIN)
+                {
+                    zmq::multipart_t  wire_msg;
+                    wire_msg.recv(*p_controller);
+                    xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
 
-            if (! (*p_request_stop) && (items[1].revents & ZMQ_POLLIN))
-            {
-                zmq::multipart_t * wire_msg = new zmq::multipart_t(); 
-                wire_msg->recv(m_shell);
-                // xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
-                
-                emit resultReadyShell(wire_msg);
+                    // signals do not like the move semantics so 
+                    // we need to put in a pointer and delete it on the receiving end  
+                    xeus::xmessage * pmsg = new xeus::xmessage(std::move(msg));
+                    emit received_controll_msg_signal(pmsg);
+                }
+
+                if (! m_request_stop.load() && (items[1].revents & ZMQ_POLLIN))
+                {
+                    zmq::multipart_t  wire_msg;
+                    wire_msg.recv(*p_shell);
+                    xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
+
+                    // signals do not like the move semantics so 
+                    // we need to put in a pointer and delete it on the receiving end  
+                    xeus::xmessage * pmsg = new xeus::xmessage(std::move(msg));
+                    emit received_shell_msg_signal(pmsg);
+                }
             }
-        }
-        catch (std::exception& e)
-        {
-            std::cerr << e.what() << std::endl;
+            catch (std::exception& e)
+            {
+                std::cerr << e.what() << std::endl;
+            }
         }
     }
 }

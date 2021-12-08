@@ -21,13 +21,6 @@
 #include <QSharedData>
 
 
-
-class QTimer;
-
-
-
-
-
 class xqServer : public xeus::xserver_zmq, public QObject
 {
 
@@ -37,24 +30,20 @@ public:
     xqServer(zmq::context_t& context,
              const xeus::xconfiguration& config,
              nl::json::error_handler_t eh);
-    virtual ~xqServer();
-
-    // void setPollIntervalSec(double intervalSec);
-    // double pollIntervalSec();
+    virtual ~xqServer() = default;
 
 protected:
     void start_impl(xeus::xpub_message message) override;
     void stop_impl() override;
-    void poll(long timeout);
-    QTimer* m_pollTimer;
-
+    void start_poller_qthread();
+    
 protected slots:
-    void notify_control_listener(zmq::multipart_t * wire_msg);
-    void notify_shell_listener(zmq::multipart_t * wire_msg);
 
-    void startWorkInAThread();
+    void on_received_shell_msg(xeus::xmessage * msg);
+    void on_received_controll_msg(xeus::xmessage * msg);
+
 private:
-    WorkerThread * p_worker_thread;
+    WorkerThread m_worker_thread;
 };
 
 std::unique_ptr<xeus::xserver> make_xqServer(xeus::xcontext& context,

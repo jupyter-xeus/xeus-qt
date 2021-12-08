@@ -22,7 +22,9 @@ find_package(xeus ${xeus_REQUIRED_VERSION} REQUIRED)
 find_package(nlohmann_json ${nlohmann_json_REQUIRED_VERSION} REQUIRED)
 find_package(xtl ${xtl_REQUIRED_VERSION} REQUIRED)
 find_package(cppzmq ${cppzmq_REQUIRED_VERSION} REQUIRED)
-find_package(xeus-sqlite REQUIRED)
+find_package(xeus-lua REQUIRED)
+find_package(xwidgets REQUIRED)
+find_package(xproperty REQUIRED)
 find_package(xq REQUIRED)
 find_package(zeromq ${zeromq_REQUIRED_VERSION} QUIET)
 
@@ -62,7 +64,9 @@ target_link_libraries(
     PUBLIC nlohmann_json::nlohmann_json
     PUBLIC xtl
     PUBLIC xeus
-    PUBLIC xeus-sqlite
+    PUBLIC xeus-lua
+    PUBLIC xwidgets
+    PUBLIC xproperty
     PUBLIC Qt5::Core
     PUBLIC Qt5::Widgets
     PUBLIC xq

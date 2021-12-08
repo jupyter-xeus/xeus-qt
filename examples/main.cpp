@@ -6,6 +6,7 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QString>
+#include <thread>
 
 #include "xq/xqServer.hpp"
 #include "xq/xqQtPoller.hpp"
@@ -13,8 +14,8 @@
 #include "xeus/xkernel.hpp"
 #include "xeus/xkernel_configuration.hpp"
 
-#include "xeus-sqlite/xeus_sqlite_interpreter.hpp"
-#include "xeus-sqlite/xeus_sqlite_config.hpp"
+#include "xeus-lua/xinterpreter.hpp"
+// #include "xeus-lua/xeus_sqlite_config.hpp"
 
 void create_json_file(std::string kernel_info)
 {
@@ -24,27 +25,58 @@ void create_json_file(std::string kernel_info)
     kernel_json.close();
 }
 
-int main(int argc, char *argv[])
-{
-    // Create interpreter instance
-    using interpreter_ptr = std::unique_ptr<xeus_sqlite::interpreter>;
-    interpreter_ptr interpreter = std::make_unique<xeus_sqlite::interpreter>();
 
-    // Create history instance
+class MainWindow : public QMainWindow{
+public:
+
+    using interpreter_ptr = std::unique_ptr<xlua::interpreter>;
     using history_manager_ptr = std::unique_ptr<xeus::xhistory_manager>;
-    history_manager_ptr hist = xeus::make_in_memory_history_manager();
 
-    auto context = xeus::make_context<zmq::context_t>();
+    MainWindow()
+    : QMainWindow()
+    {
+        // zmq context
+        auto context = xeus::make_context<zmq::context_t>();
 
-    // Create xkernel using a Qt compatible server
-    xeus::xkernel kernel(xeus::get_user_name(),
+        // Create interpreter instance
+        interpreter_ptr interpreter = std::make_unique<xlua::interpreter>();
+
+
+        // Create history instance
+        history_manager_ptr hist = xeus::make_in_memory_history_manager();
+
+
+        p_kernel.reset(new xeus::xkernel(xeus::get_user_name(),
                          std::move(context),
                          std::move(interpreter),
                          make_xqServer,
                          std::move(hist),
-                         nullptr);
+                         nullptr));
 
-    const auto& config = kernel.get_config();
+        // start the kernel
+        p_kernel->start();
+
+    }
+    void closeEvent(QCloseEvent *event) override
+    {
+        std::cout<<"closing the mainWindow\n";
+        p_kernel->get_server().stop();
+    }
+    xeus::xkernel & get_kernel(){
+        return *p_kernel;
+    }
+private:
+    std::unique_ptr<xeus::xkernel> p_kernel;
+};
+
+int main(int argc, char *argv[])
+{
+    
+
+    QApplication application(argc, argv);
+    MainWindow mainWindow;
+    const auto& config = mainWindow.get_kernel().get_config();
+
 
     std::string kernel_info, tutorial;
     tutorial = "Starting xeus-python kernel...\n\n"
@@ -52,6 +84,9 @@ int main(int argc, char *argv[])
                     " and paste the following content inside of a `kernel.json` file. And then run for example:\n\n"
                     "# jupyter console --existing kernel.json\n\n"
                     "kernel.json\n\n";
+
+    std::cout<<"main thread "<<std::this_thread::get_id()<<"\n";
+
     kernel_info = "{\n"
                   "    \"transport\": \"" + config.m_transport + "\",\n"
                   "    \"ip\": \"" + config.m_ip + "\",\n"
@@ -64,9 +99,8 @@ int main(int argc, char *argv[])
                   "    \"key\": \"" + config.m_key + "\"\n"
                   "}\n";
 
-    QApplication application(argc, argv);
-    kernel.start();
-    QMainWindow mainWindow;
+
+
     mainWindow.resize(320, 240);
     QLabel* label = new QLabel(&mainWindow);
     label->setText(QString::fromStdString(tutorial + kernel_info));
@@ -76,6 +110,13 @@ int main(int argc, char *argv[])
     mainWindow.setCentralWidget(label);
     QPushButton btn("Create kernel file", &mainWindow);
     QObject::connect(&btn, &QPushButton::clicked, [&](){create_json_file(kernel_info);});
+
+    // QObject::connect(&label, &QLabel::closeEvent, [&](){
+    //     std::cout<<"close the server\n ";
+
+    //     kernel.get_server().stop();
+    // });
+
     mainWindow.show();
     std::cout << "between show and exec" << std::endl;
     application.exec();

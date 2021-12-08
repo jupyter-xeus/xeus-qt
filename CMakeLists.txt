@@ -278,6 +278,7 @@ if (XQ_BUILD_STATIC_LIBS)
     list(APPEND xq_targets xq-static)
 endif ()
 
+
 # Installation
 # ============
 
