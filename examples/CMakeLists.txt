@@ -27,6 +27,7 @@ find_package(xwidgets REQUIRED)
 find_package(xproperty REQUIRED)
 find_package(xq REQUIRED)
 find_package(zeromq ${zeromq_REQUIRED_VERSION} QUIET)
+find_package(xcanvas REQUIRED)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
