@@ -6,15 +6,12 @@
 #include "zmq.hpp"
 #include "zmq_addon.hpp"
 
-// xeus includes
 #include <xeus/xmessage.hpp>
 #include <xeus/xserver_zmq.hpp>
 #include <xeus/xkernel_configuration.hpp>
 
-// xqseme includes
 #include "xq/xqQtPoller.hpp"
 
-// Qt includes
 #include <QList>
 #include <QSharedPointer>
 #include <QSocketNotifier>

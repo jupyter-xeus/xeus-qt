@@ -20,20 +20,14 @@
 xqServer::xqServer(zmq::context_t& context,
                    const xeus::xconfiguration& c,
                    nl::json::error_handler_t eh)
-    : 
+    :
     xserver_zmq(context, c, eh),
     m_worker_thread(this, &m_shell, &m_controller,p_auth.get())
 {
 }
 
-// xqServer::~xqServer()
-// {
-
-// }
-
 void xqServer::start_impl(xeus::xpub_message message)
 {
-  
     start_publisher_thread();
     start_heartbeat_thread();
 
@@ -43,7 +37,7 @@ void xqServer::start_impl(xeus::xpub_message message)
 }
 
 void xqServer::stop_impl()
-{   
+{
     xserver_zmq::stop_impl();
     m_worker_thread.stop();
     m_worker_thread.wait();
