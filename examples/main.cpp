@@ -6,6 +6,8 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QString>
+#include <QVBoxLayout>
+
 #include <thread>
 
 #include "xq/xqServer.hpp"
@@ -15,7 +17,6 @@
 #include "xeus/xkernel_configuration.hpp"
 
 #include "xeus-lua/xinterpreter.hpp"
-// #include "xeus-lua/xeus_sqlite_config.hpp"
 
 void create_json_file(std::string kernel_info)
 {
@@ -71,12 +72,9 @@ private:
 
 int main(int argc, char *argv[])
 {
-    
-
     QApplication application(argc, argv);
     MainWindow mainWindow;
     const auto& config = mainWindow.get_kernel().get_config();
-
 
     std::string kernel_info, tutorial;
     tutorial = "Starting xeus-python kernel...\n\n"
@@ -84,10 +82,7 @@ int main(int argc, char *argv[])
                     " and paste the following content inside of a `kernel.json` file. And then run for example:\n\n"
                     "# jupyter console --existing kernel.json\n\n"
                     "kernel.json\n\n";
-
-    std::cout<<"main thread "<<std::this_thread::get_id()<<"\n";
-
-    kernel_info = "{\n"
+    kernel_info = "{\n\n"
                   "    \"transport\": \"" + config.m_transport + "\",\n"
                   "    \"ip\": \"" + config.m_ip + "\",\n"
                   "    \"control_port\": " + config.m_control_port + ",\n"
@@ -99,26 +94,18 @@ int main(int argc, char *argv[])
                   "    \"key\": \"" + config.m_key + "\"\n"
                   "}\n";
 
+    mainWindow.resize(620, 440);
 
-
-    mainWindow.resize(320, 240);
     QLabel* label = new QLabel(&mainWindow);
     label->setText(QString::fromStdString(tutorial + kernel_info));
     label->setTextInteractionFlags(Qt::TextSelectableByMouse);
     label->setWordWrap(true);
-    std::cout << "not getting any stdout?" << std::endl;
     mainWindow.setCentralWidget(label);
-    QPushButton btn("Create kernel file", &mainWindow);
+    QPushButton btn("kernel", &mainWindow);
     QObject::connect(&btn, &QPushButton::clicked, [&](){create_json_file(kernel_info);});
 
-    // QObject::connect(&label, &QLabel::closeEvent, [&](){
-    //     std::cout<<"close the server\n ";
-
-    //     kernel.get_server().stop();
-    // });
-
     mainWindow.show();
-    std::cout << "between show and exec" << std::endl;
     application.exec();
+
     return 0;
 }
