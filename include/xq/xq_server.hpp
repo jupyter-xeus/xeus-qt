@@ -6,19 +6,19 @@
 #include "zmq.hpp"
 #include "zmq_addon.hpp"
 
-// xeus includes
 #include <xeus/xmessage.hpp>
 #include <xeus/xserver_zmq.hpp>
 #include <xeus/xkernel_configuration.hpp>
 
-// Qt includes
+#include "xq/xq_qt_poller.hpp"
+
 #include <QList>
 #include <QSharedPointer>
 #include <QSocketNotifier>
+#include <QSharedData>
 
-class QTimer;
 
-class xqServer : public xeus::xserver_zmq
+class xqServer : public xeus::xserver_zmq, public QObject
 {
 
 public:
@@ -27,16 +27,20 @@ public:
     xqServer(zmq::context_t& context,
              const xeus::xconfiguration& config,
              nl::json::error_handler_t eh);
-    virtual ~xqServer();
-
-    void setPollIntervalSec(double intervalSec);
-    double pollIntervalSec();
+    virtual ~xqServer() = default;
 
 protected:
-
     void start_impl(xeus::xpub_message message) override;
     void stop_impl() override;
-    QTimer* m_pollTimer;
+    void start_poller_qthread();
+    
+protected slots:
+
+    void on_received_shell_msg(xeus::xmessage * msg);
+    void on_received_controll_msg(xeus::xmessage * msg);
+
+private:
+    WorkerThread m_worker_thread;
 };
 
 std::unique_ptr<xeus::xserver> make_xqServer(xeus::xcontext& context,

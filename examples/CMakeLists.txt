@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(xqseme VERSION 0.0.1)
+project(xeus-qt VERSION 0.0.1)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
@@ -14,6 +14,7 @@ set(nlohmann_json_REQUIRED_VERSION 3.2.0)
 set(xtl_REQUIRED_VERSION 0.7)
 set(cppzmq_REQUIRED_VERSION 4.4.1)
 set(zeromq_REQUIRED_VERSION 4.3.2)
+# set(CMAKE_C_FLAGS "lrt")
 
 find_package(Qt5Core ${Qt5_REQUIRED_VERSION} REQUIRED)
 find_package(Qt5Widgets ${Qt5_REQUIRED_VERSION} REQUIRED)
@@ -21,9 +22,12 @@ find_package(xeus ${xeus_REQUIRED_VERSION} REQUIRED)
 find_package(nlohmann_json ${nlohmann_json_REQUIRED_VERSION} REQUIRED)
 find_package(xtl ${xtl_REQUIRED_VERSION} REQUIRED)
 find_package(cppzmq ${cppzmq_REQUIRED_VERSION} REQUIRED)
-find_package(xeus-sqlite REQUIRED)
+find_package(xeus-lua REQUIRED)
+find_package(xwidgets REQUIRED)
+find_package(xproperty REQUIRED)
 find_package(xq REQUIRED)
 find_package(zeromq ${zeromq_REQUIRED_VERSION} QUIET)
+find_package(xcanvas REQUIRED)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -61,7 +65,9 @@ target_link_libraries(
     PUBLIC nlohmann_json::nlohmann_json
     PUBLIC xtl
     PUBLIC xeus
-    PUBLIC xeus-sqlite
+    PUBLIC xeus-lua
+    PUBLIC xwidgets
+    PUBLIC xproperty
     PUBLIC Qt5::Core
     PUBLIC Qt5::Widgets
     PUBLIC xq

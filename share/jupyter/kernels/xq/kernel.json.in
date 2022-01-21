@@ -1,0 +1,10 @@
+{
+  "display_name": "xeus-qt @XEUS_QT_VERSION_MAJOR@.@XEUS_QT_VERSION_MINOR@ (xq)",
+  "argv": [
+      "@XQ_KERNELSPEC_PATH@xq",
+      "-f",
+      "{connection_file}"
+  ],
+  "language": "xq,
+  "metadata": { "debugger": true }
+}
