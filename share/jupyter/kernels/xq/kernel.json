@@ -1,10 +1,10 @@
 {
-  "display_name": "Python 3.9 (XPython)",
+  "display_name": "Qt 5.12 (xq)",
   "argv": [
-      "xqse-me",
+      "xeus-qt",
       "-f",
       "{connection_file}"
   ],
-  "language": "python",
-  "metadata": { "debugger": true }
+  "language": "c++",
+  "metadata": { "debugger": false }
 }

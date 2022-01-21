@@ -10,8 +10,8 @@
 
 #include <thread>
 
-#include "xq/xqServer.hpp"
-#include "xq/xqQtPoller.hpp"
+#include "xq/xq_server.hpp"
+#include "xq/xq_qt_poller.hpp"
 
 #include "xeus/xkernel.hpp"
 #include "xeus/xkernel_configuration.hpp"
@@ -59,6 +59,16 @@ public:
 
     }
 
+    void closeEvent() override
+    {
+        std::cout<<"closing the mainWindow\n";
+        p_kernel->get_server().stop();
+    }
+
+    xeus::xkernel & get_kernel(){
+        return *p_kernel;
+    }
+
 private:
     std::unique_ptr<xeus::xkernel> p_kernel;
 };
@@ -93,8 +103,8 @@ int main(int argc, char *argv[])
     label->setText(QString::fromStdString(tutorial + kernel_info));
     label->setTextInteractionFlags(Qt::TextSelectableByMouse);
     label->setWordWrap(true);
-    QPushButton btn("kernel", &mainWindow);
 
+    QPushButton btn("kernel", &mainWindow);
     QObject::connect(&btn, &QPushButton::clicked, [&](){create_json_file(kernel_info);});
 
     mainWindow.setCentralWidget(label);

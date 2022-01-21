@@ -10,7 +10,7 @@
 #include <xeus/xserver_zmq.hpp>
 #include <xeus/xkernel_configuration.hpp>
 
-#include "xq/xqQtPoller.hpp"
+#include "xq/xq_qt_poller.hpp"
 
 #include <QList>
 #include <QSharedPointer>

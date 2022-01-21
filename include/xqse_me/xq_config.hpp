@@ -7,32 +7,32 @@
 * The full license is in the file LICENSE, distributed with this software.         *
 ************************************************************************************/
 
-#ifndef XQSE_ME_CONFIG_HPP
-#define XQSE_ME_CONFIG_HPP
+#ifndef XEUS_QT_CONFIG_HPP
+#define XEUS_QT_CONFIG_HPP
 
 // Project version
-#define XQSE_ME_VERSION_MAJOR 0
-#define XQSE_ME_VERSION_MINOR 10
-#define XQSE_ME_VERSION_PATCH 0
+#define XEUS_QT_VERSION_MAJOR 0
+#define XEUS_QT_VERSION_MINOR 10
+#define XEUS_QT_VERSION_PATCH 0
 
 // Composing the version string from major, minor and patch
-#define XQSE_ME_CONCATENATE(A, B) XQSE_ME_CONCATENATE_IMPL(A, B)
-#define XQSE_ME_CONCATENATE_IMPL(A, B) A##B
-#define XQSE_ME_STRINGIFY(a) XQSE_ME_STRINGIFY_IMPL(a)
-#define XQSE_ME_STRINGIFY_IMPL(a) #a
+#define XEUS_QT_CONCATENATE(A, B) XEUS_QT_CONCATENATE_IMPL(A, B)
+#define XEUS_QT_CONCATENATE_IMPL(A, B) A##B
+#define XEUS_QT_STRINGIFY(a) XEUS_QT_STRINGIFY_IMPL(a)
+#define XEUS_QT_STRINGIFY_IMPL(a) #a
 
-#define XQSE_ME_VERSION XQSE_ME_STRINGIFY(XQSE_ME_CONCATENATE(XQSE_ME_VERSION_MAJOR,   \
-                       XQSE_ME_CONCATENATE(.,XQSE_ME_CONCATENATE(XQSE_ME_VERSION_MINOR,   \
-                                              XQSE_ME_CONCATENATE(.,XQSE_ME_VERSION_PATCH)))))
+#define XEUS_QT_VERSION XEUS_QT_STRINGIFY(XEUS_QT_CONCATENATE(XEUS_QT_VERSION_MAJOR,   \
+                       XEUS_QT_CONCATENATE(.,XEUS_QT_CONCATENATE(XEUS_QT_VERSION_MINOR,   \
+                                              XEUS_QT_CONCATENATE(.,XEUS_QT_VERSION_PATCH)))))
 
 #ifdef _WIN32
-    #ifdef XQSE_ME_EXPORTS
-        #define XQSE_ME_API __declspec(dllexport)
+    #ifdef XEUS_QT_EXPORTS
+        #define XEUS_QT_API __declspec(dllexport)
     #else
-        #define XQSE_ME_API __declspec(dllimport)
+        #define XEUS_QT_API __declspec(dllimport)
     #endif
 #else
-    #define XQSE_ME_API
+    #define XEUS_QT_API
 #endif
 
 #endif

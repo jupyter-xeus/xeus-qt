@@ -1,4 +1,4 @@
-#include "xq/xqQtPoller.hpp"
+#include "xq/xq_qt_poller.hpp"
 
 #include "xeus/xserver_zmq.hpp"
 #include "xeus/xzmq_serializer.hpp"
@@ -27,7 +27,6 @@ void WorkerThread::stop()
 
 void WorkerThread::run()
 {
-    std::cout << "run" << std::endl;
     zmq::pollitem_t items[]
         = { { *p_controller, 0, ZMQ_POLLIN, 0 }, { *p_shell, 0, ZMQ_POLLIN, 0 } };
 

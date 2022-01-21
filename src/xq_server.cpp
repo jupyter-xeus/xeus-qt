@@ -1,19 +1,15 @@
-#include "xq/xqServer.hpp"
-#include "xq/xqQtPoller.hpp"
-
-// STL includes
 #include <memory>
 #include <thread>
 #include <iostream>
 
-// zmq includes
 #include <zmq_addon.hpp>
 
-// xeus includes
 #include <xeus/xserver_zmq.hpp>
 #include "xeus/xzmq_serializer.hpp"
 
-// Qt includes
+#include "xq/xq_server.hpp"
+#include "xq/xq_qt_poller.hpp"
+
 #include <QDebug>
 #include <QTimer>
 
