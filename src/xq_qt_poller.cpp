@@ -7,9 +7,9 @@
 #include <zmq_addon.hpp>
 
 WorkerThread::WorkerThread(QObject* parent,
-                           zmq::socket_t * p_shell,
-                           zmq::socket_t * p_controller,
-                           xeus::xauthentication * auth)
+                           zmq::socket_t* p_shell,
+                           zmq::socket_t* p_controller,
+                           xeus::xauthentication* auth)
     :
     QThread(parent),
     p_shell(p_shell),
@@ -21,7 +21,7 @@ WorkerThread::WorkerThread(QObject* parent,
 }
 
 void WorkerThread::stop()
-{   
+{
     m_request_stop = true;
 }
 
@@ -32,7 +32,6 @@ void WorkerThread::run()
 
     while(!m_request_stop.load())
     {
-
         zmq::poll(&items[0], 2, std::chrono::milliseconds(10));
         {
             try
@@ -44,13 +43,13 @@ void WorkerThread::run()
                     wire_msg.recv(*p_controller);
                     xeus::xmessage msg = xeus::xzmq_serializer::deserialize(wire_msg, *p_auth);
 
-                    // signals do not like the move semantics so 
+                    // signals do not like the move semantics so
                     // we need to put in a pointer and delete it on the receiving end
-                    xeus::xmessage * pmsg = new xeus::xmessage(std::move(msg));
+                    xeus::xmessage* pmsg = new xeus::xmessage(std::move(msg));
                     emit received_controll_msg_signal(pmsg);
                 }
 
-                if (! m_request_stop.load() && (items[1].revents & ZMQ_POLLIN))
+                if (!m_request_stop.load() && (items[1].revents & ZMQ_POLLIN))
                 {
                     zmq::multipart_t  wire_msg;
                     wire_msg.recv(*p_shell);

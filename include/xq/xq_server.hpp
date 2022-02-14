@@ -18,32 +18,31 @@
 #include <QSharedData>
 
 
-class xqServer : public xeus::xserver_zmq, public QObject
+class xq_server : public xeus::xserver_zmq, public QObject
 {
 
 public:
     using socket_notifier_ptr = QSharedPointer<QSocketNotifier>;
 
-    xqServer(zmq::context_t& context,
+    xq_server(zmq::context_t& context,
              const xeus::xconfiguration& config,
              nl::json::error_handler_t eh);
-    virtual ~xqServer() = default;
+    virtual ~xq_server() = default;
 
 protected:
     void start_impl(xeus::xpub_message message) override;
     void stop_impl() override;
     void start_poller_qthread();
-    
-protected slots:
 
-    void on_received_shell_msg(xeus::xmessage * msg);
-    void on_received_controll_msg(xeus::xmessage * msg);
+protected slots:
+    void on_received_shell_msg(xeus::xmessage* msg);
+    void on_received_controll_msg(xeus::xmessage* msg);
 
 private:
     WorkerThread m_worker_thread;
 };
 
-std::unique_ptr<xeus::xserver> make_xqServer(xeus::xcontext& context,
+std::unique_ptr<xeus::xserver> make_xq_server(xeus::xcontext& context,
                                              const xeus::xconfiguration& config,
                                              nl::json::error_handler_t eh);
 
