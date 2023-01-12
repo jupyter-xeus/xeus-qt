@@ -1,3 +1,7 @@
+# Xeus-qt
+
+ZeroMQ-based middleware for xeus integrated in the Qt event loop.
+
 ## Creating the environment
 
 Qt is always refering to Qt5.
@@ -35,3 +39,9 @@ make install
 If you're having issues with missing packages related to LibGl, try to add the following packages with `mamba`:
 
     mesa-libgl-devel-cos6-x86_64 mesa-dri-drivers-cos6-x86_64 libselinux-cos6-x86_64 libxdamage-cos6-x86_64 libxxf86vm-cos6-x86_64 libxext-cos6-x86_64 xorg-libxfixes
+
+# License
+
+We use a shared copyright model that enables all contributors to maintain the copyright on their contributions.
+
+This software is licensed under the BSD-3-Clause license. See the LICENSE file for details.
