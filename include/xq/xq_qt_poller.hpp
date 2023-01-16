@@ -6,7 +6,7 @@
 #include "zmq_addon.hpp"
 
 #include "xeus/xmessage.hpp"
-#include "xeus/xauthentication.hpp"
+#include "xeus-zmq/xauthentication.hpp"
 #include "xeus/xkernel_configuration.hpp"
 
 #include <iostream>

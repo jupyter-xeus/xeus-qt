@@ -7,7 +7,7 @@ ZeroMQ-based middleware for xeus integrated in the Qt event loop.
 Qt is always refering to Qt5.
 
 ```
-mamba install compilers cmake pkg-config zeromq cppzmq xtl OpenSSL nlohmann_json qt=5.12.9 xeus=2.1.1 -c conda-forge
+mamba install compilers cmake pkg-config zeromq cppzmq xtl OpenSSL nlohmann_json qt=5.12.9 xeus=3.0.3 xeus-zmq=1.0.2  -c conda-forge
 ```
 
 To run the example:
