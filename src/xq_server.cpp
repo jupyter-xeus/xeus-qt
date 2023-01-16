@@ -4,8 +4,8 @@
 
 #include <zmq_addon.hpp>
 
-#include <xeus/xserver_zmq.hpp>
-#include "xeus/xzmq_serializer.hpp"
+#include <xeus-zmq/xserver_zmq.hpp>
+#include "xeus-zmq/xzmq_serializer.hpp"
 
 #include "xq/xq_server.hpp"
 #include "xq/xq_qt_poller.hpp"

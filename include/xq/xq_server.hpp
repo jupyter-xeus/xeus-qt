@@ -7,7 +7,7 @@
 #include "zmq_addon.hpp"
 
 #include <xeus/xmessage.hpp>
-#include <xeus/xserver_zmq.hpp>
+#include <xeus-zmq/xserver_zmq.hpp>
 #include <xeus/xkernel_configuration.hpp>
 
 #include "xq/xq_qt_poller.hpp"

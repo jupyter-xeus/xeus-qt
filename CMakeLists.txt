@@ -14,7 +14,8 @@ set(nlohmann_json_REQUIRED_VERSION 3.2.0)
 set(xtl_REQUIRED_VERSION 0.7)
 set(cppzmq_REQUIRED_VERSION 4.4.1)
 set(zeromq_REQUIRED_VERSION 4.3.2)
-
+set(xeus_zmq_REQUIRED_VERSION 1.0.2)
+set(xeus_REQUIRED_VERSION 3.0.3)
 # Compilation options
 option(XQ_DISABLE_ARCH_NATIVE "disable -march=native flag" OFF)
 option(XQ_BUILD_SHARED_LIBS "Build XQ shared library." ON)
@@ -57,7 +58,11 @@ message(STATUS "xq binary version: v${XQ_BINARY_VERSION}")
 find_package(Qt5 COMPONENTS Core REQUIRED)
 
 if (NOT TARGET xeus AND NOT TARGET xeus-static)
-    find_package(xeus ${xeus_REQUIRED_VERSION} REQUIRED)
+    find_package(xeus     ${xeus_REQUIRED_VERSION} REQUIRED)
+endif ()
+
+if (NOT TARGET xeus-zmq AND NOT TARGET xeus-zmq-static)
+    find_package(xeus-zmq ${xeus_zmq_REQUIRED_VERSION} REQUIRED)
 endif ()
 
 if (NOT TARGET nlohmann_json)
@@ -162,6 +167,7 @@ macro(xq_create_target target_name linkage output_name)
         PUBLIC nlohmann_json::nlohmann_json
         PUBLIC xtl
         PUBLIC xeus
+        PUBLIC xeus-zmq
         PUBLIC Qt5::Core
     )
 

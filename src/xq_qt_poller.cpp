@@ -1,8 +1,8 @@
 #include "xq/xq_qt_poller.hpp"
 
-#include "xeus/xserver_zmq.hpp"
-#include "xeus/xzmq_serializer.hpp"
-#include "xeus/xmiddleware.hpp"
+#include "xeus-zmq/xserver_zmq.hpp"
+#include "xeus-zmq/xzmq_serializer.hpp"
+#include "xeus-zmq/xmiddleware.hpp"
 
 #include <zmq_addon.hpp>
 
