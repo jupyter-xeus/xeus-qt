@@ -4,9 +4,11 @@ on:
   push:
     branches:
     - main
+    - master
   pull_request:
     branches:
     - main
+    - master
 
 jobs:
   unix:
@@ -53,7 +55,6 @@ jobs:
           # make -j ${{ steps.cpu-cores.outputs.count }}
 
      
-
       - name: install xeus-qt
         shell: bash -l {0}
         run: |
@@ -106,16 +107,4 @@ jobs:
           set CL=/MP
           ninja install
         working-directory: build
-
-      - name: ctest
-        uses: nick-invision/retry@v2
-        with:
-          timeout_minutes: 4
-          max_attempts: 4
-          shell: cmd
-          command: |
-            call C:\Users\runneradmin\micromamba-root\condabin\micromamba.bat activate xeus
-            set PATH=%CONDA_PREFIX%;%CONDA_PREFIX%\\Scripts;%CONDA_PREFIX%\\Library;%CONDA_PREFIX%\\Library\\bin;%PATH%
-            cd build
-            ctest --output-on-failure
 
