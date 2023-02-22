@@ -1,4 +1,6 @@
 # Xeus-qt
+[![CI](https://github.com/jupyter-xeus/xeus-qt/actions/workflows/main.yml/badge.svg)](https://github.com/jupyter-xeus/xeus-qt/actions/workflows/main.yml)
+
 
 ZeroMQ-based middleware for xeus integrated in the Qt event loop.
 
