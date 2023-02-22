@@ -6,10 +6,10 @@ ZeroMQ-based middleware for xeus integrated in the Qt event loop.
 
 ## Dependencies
 
-| `xeus-qt` | `xeus` | `qt` |
-|-----------|--------|------|
-|  master   | ^3.0.0 | ^5.0 |
-|  0.1.0    | ^3.0.0 | ^5.0 |
+| `xeus-qt` | `xeus` | `xeus-zmq` | `qt` | `xtl` | `cppzmq` | `nlohmann_json` |
+|-----------|--------|------------|------|-------|----------|-----------------|
+|  master   | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
+|  0.1.0    | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
 
 ## Building and running the example kernel from source
 
