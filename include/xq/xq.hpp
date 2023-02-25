@@ -27,7 +27,7 @@
 // Project version
 #define XQ_VERSION_MAJOR 0
 #define XQ_VERSION_MINOR 1
-#define XQ_VERSION_PATCH 1
+#define XQ_VERSION_PATCH 2
 
 // Binary version
 #define XQ_BINARY_CURRENT 1
