@@ -10,12 +10,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(nlohmann_json_REQUIRED_VERSION 3.2.0)
-set(xtl_REQUIRED_VERSION 0.7)
-set(cppzmq_REQUIRED_VERSION 4.4.1)
-set(zeromq_REQUIRED_VERSION 4.3.2)
-set(xeus_zmq_REQUIRED_VERSION 1.0.2)
-set(xeus_REQUIRED_VERSION 3.0.3)
+
 # Compilation options
 option(XQ_DISABLE_ARCH_NATIVE "disable -march=native flag" OFF)
 option(XQ_BUILD_SHARED_LIBS "Build XQ shared library." ON)
@@ -51,9 +46,15 @@ set(XQ_BINARY_VERSION
     ${XQ_BINARY_CURRENT}.${XQ_BINARY_REVISION}.${XQ_BINARY_AGE})
 message(STATUS "xq binary version: v${XQ_BINARY_VERSION}")
 
-
 # Dependencies
 # ============
+
+set(nlohmann_json_REQUIRED_VERSION 3.2.0)
+set(xtl_REQUIRED_VERSION 0.7)
+set(cppzmq_REQUIRED_VERSION 4.4.1)
+set(zeromq_REQUIRED_VERSION 4.3.2)
+set(xeus_zmq_REQUIRED_VERSION 1.0.2)
+set(xeus_REQUIRED_VERSION 3.0.3)
 
 find_package(Qt5 COMPONENTS Core REQUIRED)
 
@@ -153,23 +154,6 @@ macro(xq_create_target target_name linkage output_name)
     )
 
     target_link_libraries(${target_name} PUBLIC OpenSSL::Crypto)
-
-    if (NOT MSVC)
-        if (APPLE)
-            target_link_libraries(${target_name} PUBLIC "-framework CoreFoundation")
-        else ()
-            if (XQ_STATIC_DEPENDENCIES)
-                find_path(LIBUUID_INCLUDE_DIR uuid.h PATH_SUFFIXES uuid)
-                find_library(LIBUUID_LIBRARY libuuid.a)
-                target_include_directories(${target_name} PRIVATE ${LIBUUID_INCLUDE_DIR})
-                target_link_libraries(${target_name} PUBLIC ${LIBUUID_LIBRARY}) 
-                target_link_libraries(${target_name} PUBLIC ${sodium_LIBRARY_RELEASE})
-            else ()
-                find_package(LibUUID REQUIRED)
-                target_link_libraries(${target_name} PUBLIC LibUUID::LibUUID)
-            endif ()
-        endif ()
-    endif ()
 
     if (UNIX)
         # CMake does not compute the version number of so files as libtool
