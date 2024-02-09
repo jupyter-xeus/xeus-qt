@@ -188,7 +188,7 @@ macro(xq_create_target target_name linkage output_name)
     # Compilation flags
     # =================
 
-    target_compile_features(${target_name} PRIVATE cxx_std_11)
+    target_compile_features(${target_name} PRIVATE cxx_std_17)
 
     if (CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR
         CMAKE_CXX_COMPILER_ID MATCHES "GNU" OR
