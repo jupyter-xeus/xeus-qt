@@ -50,7 +50,7 @@ public:
         p_kernel.reset(new xeus::xkernel(xeus::get_user_name(),
                          std::move(context),
                          std::move(interpreter),
-                         make_xqServer,
+                         make_xq_server,
                          std::move(hist),
                          nullptr));
 
@@ -59,7 +59,7 @@ public:
 
     }
 
-    void closeEvent() override
+    void closeEvent(QCloseEvent*) override
     {
         std::cout<<"closing the mainWindow\n";
         p_kernel->get_server().stop();
