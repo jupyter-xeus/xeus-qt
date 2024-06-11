@@ -52,38 +52,5 @@ namespace xeus
     };
 }
 
-/*
-class XQ_API WorkerThread : public QThread
-{
-public:
-
-    Q_OBJECT
-
-public:
-
-    
-    WorkerThread(QObject* parent,
-                 zmq::socket_t* p_shell,
-                 zmq::socket_t* p_controller,
-                 xeus::xauthentication* p_auth);
-    void run();
-    void stop();
-
-protected:
-
-    zmq::socket_t m_shell;
-    zmq::socket_t m_controller;
-    zmq::socket_t* p_shell;
-    zmq::socket_t* p_controller;
-    xeus::xauthentication* p_auth;
-    std::atomic<bool> m_request_stop;
-
-signals:
-
-    void received_shell_msg_signal(xeus::xmessage* msg);
-    void received_controll_msg_signal(xeus::xmessage* msg);
-};
-
-*/
 #endif
 
