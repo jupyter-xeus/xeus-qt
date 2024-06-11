@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 project(xq)
 
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")
 set(XQ_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(XQ_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(XQ_TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test)
@@ -159,10 +158,6 @@ macro(xq_create_target target_name linkage output_name)
         target_compile_definitions(${target_name} PUBLIC -DNOMINMAX)
         target_compile_options(${target_name} PUBLIC /DGUID_WINDOWS /MP /bigobj)
         target_compile_options(${target_name} PUBLIC /wd4251 /wd4996)
-    elseif (APPLE)
-        target_compile_definitions(${target_name} PUBLIC -DGUID_CFUUID)
-    else ()
-        target_compile_definitions(${target_name} PUBLIC -DGUID_LIBUUID)
     endif ()
 
     if (XQ_STATIC_DEPENDENCIES AND CMAKE_DL_LIBS)
@@ -237,7 +232,6 @@ write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Conf
                                  COMPATIBILITY AnyNewerVersion)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/${PROJECT_NAME}Config.cmake
               ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
-              ${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindLibUUID.cmake
               DESTINATION ${XQ_CMAKECONFIG_INSTALL_DIR})
 install(EXPORT ${PROJECT_NAME}-targets
         FILE ${PROJECT_NAME}Targets.cmake

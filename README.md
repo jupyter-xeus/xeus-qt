@@ -6,9 +6,14 @@ ZeroMQ-based middleware for xeus integrated in the Qt event loop.
 
 ## Dependencies
 
+| `xeus-qt` | `xeus-zmq` | `qt` | `nlohmann_json` |
+|-----------|------------|------|-----------------|
+|   main    |  ^3.0      | ^5.0 | ^3.11.3         |
+
+Versions prior to 0.2 also depend on `cppzmq` and `xtl`:
+
 | `xeus-qt` | `xeus` | `xeus-zmq` | `qt` | `xtl` | `cppzmq` | `nlohmann_json` |
 |-----------|--------|------------|------|-------|----------|-----------------|
-|  master   | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
 |  0.1.3    | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
 |  0.1.2    | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
 |  0.1.1    | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
@@ -17,7 +22,7 @@ ZeroMQ-based middleware for xeus integrated in the Qt event loop.
 ## Building and running the example kernel from source
 
 ```
-mamba install compilers cmake pkg-config zeromq cppzmq xtl OpenSSL nlohmann_json qt xeus xeus-zmq  -c conda-forge
+mamba install compilers cmake nlohmann_json qt xeus-zmq xeus-lua xwidgets xcanvas -c conda-forge
 ```
 
 To build the main library:
