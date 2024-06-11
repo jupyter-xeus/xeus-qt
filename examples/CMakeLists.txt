@@ -5,10 +5,10 @@ project(xeus-qt VERSION 0.0.1)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
-if(APPLE)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -stdlib=libc++ -mmacosx-version-min=10.8")
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -headerpad_max_install_names")
-endif()
+#if(APPLE)
+#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -stdlib=libc++ -mmacosx-version-min=10.8")
+#    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -headerpad_max_install_names")
+#endif()
 
 set(nlohmann_json_REQUIRED_VERSION 3.11.3)
 # set(CMAKE_C_FLAGS "lrt")
@@ -47,6 +47,7 @@ elseif(APPLE)
 endif()
 
 add_executable(${PROJECT_NAME} ${APP_BUNDLE} ${APP_ICON} ${SOURCES} ${HEADERS} ${UI_HEADERS})
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
 if(APPLE)
     set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/AppleInfo.plist)
