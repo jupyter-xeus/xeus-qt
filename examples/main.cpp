@@ -39,8 +39,6 @@ public:
     : QMainWindow()
     {
         // zmq context
-        auto context = xeus::make_context<zmq::context_t>();
-
         std::unique_ptr<xeus::xcontext> context = xeus::make_zmq_context();
         
         // Create interpreter instance
@@ -54,7 +52,7 @@ public:
         p_kernel.reset(new xeus::xkernel(xeus::get_user_name(),
                          std::move(context),
                          std::move(interpreter),
-                         make_xq_server,
+                         xeus::make_xq_server,
                          std::move(hist),
                          nullptr));
 
