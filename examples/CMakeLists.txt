@@ -10,23 +10,16 @@ if(APPLE)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -headerpad_max_install_names")
 endif()
 
-set(nlohmann_json_REQUIRED_VERSION 3.2.0)
-set(xtl_REQUIRED_VERSION 0.7)
-set(cppzmq_REQUIRED_VERSION 4.4.1)
-set(zeromq_REQUIRED_VERSION 4.3.2)
+set(nlohmann_json_REQUIRED_VERSION 3.11.3)
 # set(CMAKE_C_FLAGS "lrt")
 
 find_package(Qt5Core ${Qt5_REQUIRED_VERSION} REQUIRED)
 find_package(Qt5Widgets ${Qt5_REQUIRED_VERSION} REQUIRED)
-find_package(xeus ${xeus_REQUIRED_VERSION} REQUIRED)
 find_package(nlohmann_json ${nlohmann_json_REQUIRED_VERSION} REQUIRED)
-find_package(xtl ${xtl_REQUIRED_VERSION} REQUIRED)
-find_package(cppzmq ${cppzmq_REQUIRED_VERSION} REQUIRED)
 find_package(xeus-lua REQUIRED)
 find_package(xwidgets REQUIRED)
 find_package(xproperty REQUIRED)
 find_package(xq REQUIRED)
-find_package(zeromq ${zeromq_REQUIRED_VERSION} QUIET)
 find_package(xcanvas REQUIRED)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
@@ -61,10 +54,7 @@ endif()
 
 target_link_libraries(
     ${PROJECT_NAME}
-    PUBLIC ${CPPZMQ_TARGET_NAME}
     PUBLIC nlohmann_json::nlohmann_json
-    PUBLIC xtl
-    PUBLIC xeus
     PUBLIC xeus-lua
     PUBLIC xwidgets
     PUBLIC xproperty

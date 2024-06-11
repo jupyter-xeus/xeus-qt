@@ -12,7 +12,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 
 # Compilation options
-option(XQ_DISABLE_ARCH_NATIVE "disable -march=native flag" OFF)
 option(XQ_BUILD_SHARED_LIBS "Build XQ shared library." ON)
 option(XQ_BUILD_STATIC_LIBS "Build XQ static library (default if BUILD_SHARED_LIBS is OFF)." ON)
 option(XQ_STATIC_DEPENDENCIES "link statically with XQ dependencies" OFF)
@@ -49,18 +48,10 @@ message(STATUS "xq binary version: v${XQ_BINARY_VERSION}")
 # Dependencies
 # ============
 
-set(nlohmann_json_REQUIRED_VERSION 3.2.0)
-set(xtl_REQUIRED_VERSION 0.7)
-set(cppzmq_REQUIRED_VERSION 4.4.1)
-set(zeromq_REQUIRED_VERSION 4.3.2)
-set(xeus_zmq_REQUIRED_VERSION 1.0.2)
-set(xeus_REQUIRED_VERSION 3.0.3)
+set(nlohmann_json_REQUIRED_VERSION 3.11.3)
+set(xeus_zmq_REQUIRED_VERSION 3.0)
 
 find_package(Qt5 COMPONENTS Core REQUIRED)
-
-if (NOT TARGET xeus AND NOT TARGET xeus-static)
-    find_package(xeus     ${xeus_REQUIRED_VERSION} REQUIRED)
-endif ()
 
 if (NOT TARGET xeus-zmq AND NOT TARGET xeus-zmq-static)
     find_package(xeus-zmq ${xeus_zmq_REQUIRED_VERSION} REQUIRED)
@@ -68,40 +59,6 @@ endif ()
 
 if (NOT TARGET nlohmann_json)
     find_package(nlohmann_json ${nlohmann_json_REQUIRED_VERSION} REQUIRED)
-endif ()
-
-if (NOT TARGET xtl)
-    find_package(xtl ${xtl_REQUIRED_VERSION} REQUIRED)
-endif ()
-
-if (NOT TARGET cppzmq AND NOT TARGET cppzmq-static)
-    find_package(cppzmq ${cppzmq_REQUIRED_VERSION} REQUIRED)
-endif ()
-
-if (NOT TARGET libzmq AND NOT TARGET libzmq-static)
-    if (WIN32)
-        find_package(zeromq ${zeromq_REQUIRED_VERSION} REQUIRED)
-    else ()
-        find_package(zeromq ${zeromq_REQUIRED_VERSION} QUIET)
-
-        if (NOT ZeroMQ_FOUND)
-            message(STATUS "CMake libzmq package not found, trying again with pkg-config")
-            find_package(PkgConfig)
-            pkg_check_modules(ZeroMQ libzmq>=${zeromq_REQUIRED_VERSION} REQUIRED)
-            set(ZeroMQ_VERSION ${PC_LIBZMQ_VERSION})
-            find_library(ZeroMQ_LIBRARY NAMES libzmq.so libzmq.dylib libzmq.dll
-                 PATHS ${PC_LIBZMQ_LIBDIR} ${PC_LIBZMQ_LIBRARY_DIRS})
-            find_library(ZeroMQ_STATIC_LIBRARY NAMES libzmq-static.a libzmq.a libzmq.dll.a
-                 PATHS ${PC_LIBZMQ_LIBDIR} ${PC_LIBZMQ_LIBRARY_DIRS})
-            message(STATUS "STATIC_LIBRARY" {ZeroMQ_LIBRARY})
-            message(STATUS "STATIC_STATIC_LIBRARY" {ZeroMQ_STATIC_LIBRARY})
-         endif ()
-    endif ()
-endif ()
-
-if (NOT DEFINED OPENSSL_LIBRARY)
-    set(OPENSSL_ROOT_DIR ${CMAKE_INSTALL_PREFIX})
-    find_package(OpenSSL REQUIRED)
 endif ()
 
 # Source files
@@ -145,15 +102,10 @@ macro(xq_create_target target_name linkage output_name)
 
     target_link_libraries(
         ${target_name}
-        PUBLIC ${CPPZMQ_TARGET_NAME}
         PUBLIC nlohmann_json::nlohmann_json
-        PUBLIC xtl
-        PUBLIC xeus
         PUBLIC xeus-zmq
         PUBLIC Qt5::Core
     )
-
-    target_link_libraries(${target_name} PUBLIC OpenSSL::Crypto)
 
     if (UNIX)
         # CMake does not compute the version number of so files as libtool
@@ -195,10 +147,6 @@ macro(xq_create_target target_name linkage output_name)
         CMAKE_CXX_COMPILER_ID MATCHES "Intel")
 
         target_compile_options(${target_name} PUBLIC -Wunused-parameter -Wextra -Wreorder)
-
-        if (NOT XQ_DISABLE_ARCH_NATIVE)
-            target_compile_options(${target_name} PUBLIC -march=native)
-        endif ()
 
         message(STATUS "CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
     endif()

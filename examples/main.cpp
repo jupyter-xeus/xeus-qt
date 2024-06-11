@@ -16,6 +16,8 @@
 #include "xeus/xkernel.hpp"
 #include "xeus/xkernel_configuration.hpp"
 
+#include "xeus-zmq/xzmq_context.hpp"
+
 #include "xeus-lua/xinterpreter.hpp"
 
 void create_json_file(std::string kernel_info)
@@ -39,6 +41,8 @@ public:
         // zmq context
         auto context = xeus::make_context<zmq::context_t>();
 
+        std::unique_ptr<xeus::xcontext> context = xeus::make_zmq_context();
+        
         // Create interpreter instance
         interpreter_ptr interpreter = std::make_unique<xlua::interpreter>();
 
