@@ -52,16 +52,20 @@ jobs:
           make install
         working-directory: build
 
-      #- name: build example kernel
-      #  shell: bash -l {0}
-      #  run: |
-      #    mkdir -p build
-      #    cd build
-      #    cmake .. \
-      #     -DCMAKE_PREFIX_PATH=$CONDA_PREFIX \
-      #     -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX 
-      #     make -j 2
-      #  working-directory: examples
+      - name: install mesa-lib
+        shell: bash -l {0}
+        run: micromamba install mesalib -c conda-forge
+
+      - name: build example kernel
+        shell: bash -l {0}
+        run: |
+          mkdir -p build
+          cd build
+          cmake .. \
+           -DCMAKE_PREFIX_PATH=$CONDA_PREFIX \
+           -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX 
+           make -j 2
+        working-directory: examples
 
   win:
 
