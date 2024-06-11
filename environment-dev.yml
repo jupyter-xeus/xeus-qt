@@ -1,0 +1,22 @@
+name: xeus-qt
+channels:
+    - conda-forge
+dependencies:
+  # Build dependencies
+  - cmake
+  - cxx-compiler
+  - pkg-config
+  - make
+  # Host dependencies
+  - nlohmann_json =3.11.3
+  - xeus-zmq >=3.0, <4.0
+  - qt >= 5.12.9, <6
+  #- git
+  - mesa-libgl-cos7-aarch64
+  - mesa-libgl-cos6-x86_64
+  - mesa-dri-drivers-cos6-x86_64 
+  - libselinux-cos6-x86_64
+  - libxdamage-cos6-x86_64
+  - libxxf86vm-cos6-x86_64
+  - libxext-cos6-x86_64
+  - xorg-libxfixes
