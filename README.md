@@ -4,25 +4,12 @@
 
 ZeroMQ-based middleware for xeus integrated in the Qt event loop.
 
-## Dependencies
-
-| `xeus-qt` | `xeus-zmq` | `qt` | `nlohmann_json` |
-|-----------|------------|------|-----------------|
-|   main    |  ^3.0      | ^5.0 | ^3.11.3         |
-
-Versions prior to 0.2 also depend on `cppzmq` and `xtl`:
-
-| `xeus-qt` | `xeus` | `xeus-zmq` | `qt` | `xtl` | `cppzmq` | `nlohmann_json` |
-|-----------|--------|------------|------|-------|----------|-----------------|
-|  0.1.3    | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
-|  0.1.2    | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
-|  0.1.1    | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
-|  0.1.0    | ^3.0.0 | ^1.0       | ^5.0 |  ^0.7 | ^4.8.1   | ^3.2            |
-
 ## Building and running the example kernel from source
 
+First, create the environment with all required dependencies:
 ```
-mamba install compilers cmake nlohmann_json qt xeus-zmq xeus-lua xwidgets xcanvas -c conda-forge
+mamba env create -f environment-dev.yml -n xeus-qt
+mamba activate xeus-qt
 ```
 
 To build the main library:
@@ -41,6 +28,13 @@ mkdir build && cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX
 make install
 ```
+
+On linux, the build may fail with the following error:
+```
+cannot find "GL/gl.h"
+```
+
+In that case, run `mamba install mesalib -c conda-forge` and build again.
 
 # License
 
