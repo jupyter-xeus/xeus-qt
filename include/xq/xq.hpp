@@ -26,25 +26,12 @@
 
 // Project version
 #define XQ_VERSION_MAJOR 0
-#define XQ_VERSION_MINOR 1
-#define XQ_VERSION_PATCH 3
+#define XQ_VERSION_MINOR 2
+#define XQ_VERSION_PATCH 0
 
 // Binary version
-#define XQ_BINARY_CURRENT 1
+#define XQ_BINARY_CURRENT 2
 #define XQ_BINARY_REVISION 0
 #define XQ_BINARY_AGE 0
-
-// Kernel protocol version
-#define XQ_KERNEL_PROTOCOL_VERSION_MAJOR 0
-#define XQ_KERNEL_PROTOCOL_VERSION_MINOR 1
-
-// Composing the protocol version string from major, and minor
-#define XQ_CONCATENATE(A, B) XQ_CONCATENATE_IMPL(A, B)
-#define XQ_CONCATENATE_IMPL(A, B) A##B
-#define XQ_STRINGIFY(a) XQ_STRINGIFY_IMPL(a)
-#define XQ_STRINGIFY_IMPL(a) #a
-
-#define XQ_KERNEL_PROTOCOL_VERSION XQ_STRINGIFY(XQ_CONCATENATE(    XQ_KERNEL_PROTOCOL_VERSION_MAJOR,\
-                                                    XQ_CONCATENATE(.,  XQ_KERNEL_PROTOCOL_VERSION_MINOR)))
 
 #endif
