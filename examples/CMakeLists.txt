@@ -5,27 +5,6 @@ project(xeus-qt VERSION 0.0.1)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
-if (NOT DEFINED XEUS_QT_EXECUTABLE)
-    set(XEUS_QT_EXECUTABLE "${CMAKE_INSTALL_PREFIX}/bin/${PROJECT_NAME}")
-endif ()
-
-configure_file(
-    ${CMAKE_CURRENT_SOURCE_DIR}/../share/jupyter/kernels/xq/kernel.json.in
-    ${CMAKE_CURRENT_BINARY_DIR}/share/jupyter/kernels/xq/kernel.json
-)
-
-configure_file (
-    "${CMAKE_CURRENT_SOURCE_DIR}/../share/jupyter/kernels/xq/logo-32x32.png"
-    "${CMAKE_CURRENT_BINARY_DIR}/share/jupyter/kernels/xq/"
-    COPYONLY
-)
-
-configure_file (
-    "${CMAKE_CURRENT_SOURCE_DIR}/../share/jupyter/kernels/xq/logo-64x64.png"
-    "${CMAKE_CURRENT_BINARY_DIR}/share/jupyter/kernels/xq/"
-    COPYONLY
-)
-
 #if(APPLE)
 #    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -stdlib=libc++ -mmacosx-version-min=10.8")
 #    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -headerpad_max_install_names")
@@ -83,11 +62,6 @@ target_link_libraries(
     PUBLIC Qt5::Core
     PUBLIC Qt5::Widgets
     PUBLIC xq
-)
-
-install(
-    DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/share/jupyter/kernels/xq/
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/share/jupyter/kernels/xq
 )
 
 #MacOS bug https://github.com/lloyd/yajl/issues/201

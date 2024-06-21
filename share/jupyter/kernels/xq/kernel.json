@@ -1,0 +1,10 @@
+{
+  "display_name": "Qt 5.12 (xq)",
+  "argv": [
+      "xeus-qt",
+      "-f",
+      "{connection_file}"
+  ],
+  "language": "c++",
+  "metadata": { "debugger": false }
+}
